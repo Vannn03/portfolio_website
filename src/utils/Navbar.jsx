@@ -55,7 +55,7 @@ const Navbar = (props) => {
       >
         <div className="relative flex w-dvw items-center justify-between px-8 py-8 ss:px-20">
           {/* Logo */}
-          <h1 className="text-2xl font-extrabold">Jovan.</h1>
+          <h1 className="text-xl font-extrabold xs:text-2xl">Jovan.</h1>
 
           {/* Default: Navbar */}
           <nav className="hidden gap-14 ss:flex">
@@ -100,7 +100,7 @@ const Navbar = (props) => {
           {/* Responsive: Navigation Menu */}
           <>
             <TbMenuDeep
-              className={`flex size-9 cursor-pointer ss:hidden ${
+              className={`flex size-8 cursor-pointer xs:size-9 ss:hidden ${
                 toggleNav ? "hidden" : "flex"
               }`}
               onClick={() => {
@@ -109,7 +109,7 @@ const Navbar = (props) => {
             />
 
             <LiaTimesSolid
-              className={`size-9 cursor-pointer ss:hidden ${
+              className={`size-8 cursor-pointer xs:size-9 ss:hidden ${
                 toggleNav === true ? "flex" : "hidden"
               }`}
               onClick={() => {
@@ -122,7 +122,7 @@ const Navbar = (props) => {
         {/* Responsive: Navbar */}
         <nav className={`${toggleNav ? "flex" : "hidden"} flex-col ss:hidden`}>
           <p
-            className={`w-full cursor-pointer px-8 py-5 font-light transition-colors hover:bg-softPurple ${
+            className={`w-full cursor-pointer px-8 py-5 text-sm font-light transition-colors hover:bg-softPurple xs:text-base ${
               activeLink === "about"
                 ? "border-b-2 border-softPurple"
                 : "text-white/50"
@@ -133,7 +133,7 @@ const Navbar = (props) => {
           </p>
           <hr className="border-white/25" />
           <p
-            className={`w-full cursor-pointer px-8 py-5 font-light transition-colors hover:bg-softPurple ${
+            className={`w-full cursor-pointer px-8 py-5 text-sm font-light transition-colors hover:bg-softPurple xs:text-base ${
               activeLink === "portfolio"
                 ? "border-b-2 border-softPurple"
                 : "text-white/50"
@@ -146,7 +146,7 @@ const Navbar = (props) => {
           </p>
           <hr className="border-white/25" />
           <p
-            className={`w-full cursor-pointer px-8 py-5 font-light transition-colors hover:bg-softPurple ${
+            className={`w-full cursor-pointer px-8 py-5 text-sm font-light transition-colors hover:bg-softPurple xs:text-base ${
               activeLink === "contact"
                 ? "border-b-2 border-softPurple"
                 : "text-white/50"
