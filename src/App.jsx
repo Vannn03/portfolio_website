@@ -1,0 +1,97 @@
+import { useRef } from "react";
+import { motion } from "framer-motion";
+import "./App.css";
+import Hero from "./pages/About/Hero/Hero";
+import Skills from "./pages/About/Skills/Skills";
+import Contact from "./pages/Contact/Contact";
+import Experiences from "./pages/Portfolio/Experiences/Experiences";
+import SelectedWorks from "./pages/Portfolio/SelectedWorks/SelectedWorks";
+import Footer from "./utils/Footer";
+import Navbar from "./utils/Navbar";
+
+function App() {
+  const aboutRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const selectedWorkRef = useRef(null);
+  const contactRef = useRef(null);
+
+  // initial={{ opacity: 0, transform: translateY(-4) }}
+  // whileInView={{ opacity: 1, transform: translateY(0) }}
+  // viewport={{ once: true }}
+
+  const subTitle = (title) => (
+    <motion.div
+      className="px-8 pb-10 ss:px-20"
+      initial={{ opacity: 0, transform: "translateX(-40px)" }}
+      whileInView={{ opacity: 1, transform: "translateX(0)" }}
+      transition={{ delay: 0.2 }}
+      viewport={{ once: true }}
+    >
+      <p className="text-xl font-semibold xs:text-2xl ss:text-3xl">My</p>
+      <h1 className="mt-0 text-3xl font-bold text-softPurple xs:mt-1 xs:text-4xl ss:text-5xl">
+        {title}
+      </h1>
+      <div className="w mt-4 w-24 border-4 border-softPurple xs:mt-5 xs:w-28 ss:w-36" />
+    </motion.div>
+  );
+
+  return (
+    <div className="font-bvp">
+      <header className="fixed top-0 z-50">
+        <Navbar
+          aboutRef={aboutRef}
+          portfolioRef={portfolioRef}
+          contactRef={contactRef}
+        />
+      </header>
+
+      <div ref={aboutRef}>
+        <Hero selectedWorkRef={selectedWorkRef} motion={motion} />
+      </div>
+
+      <div className="pt-32" ref={portfolioRef}>
+        {subTitle("Best Skills")}
+        <Skills motion={motion} />
+      </div>
+
+      <div className="mt-32 bg-secondary py-8" ref={selectedWorkRef}>
+        {subTitle("Selected Works")}
+        <SelectedWorks motion={motion} />
+      </div>
+
+      <div className="pt-32">
+        {subTitle("Experiences")}
+        <Experiences motion={motion} />
+      </div>
+
+      <div className="mt-32 bg-secondary py-8" ref={contactRef}>
+        <div className="flex flex-col items-center px-8 pb-10 ss:px-20">
+          <motion.div
+            initial={{ opacity: 0, transform: "translateX(-40px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0)" }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <h1 className="text-3xl font-bold xs:text-4xl ss:text-5xl">
+              Contact Me
+            </h1>
+          </motion.div>
+          <motion.div
+            className="w mt-4 w-24 border-4 border-softPurple xs:mt-5 xs:w-28 ss:w-36"
+            initial={{ opacity: 0, transform: "translateX(40px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0)" }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true }}
+          />
+        </div>
+        <Contact motion={motion} />
+      </div>
+
+      <footer className="bg-footer text-center">
+        <Footer />
+      </footer>
+    </div>
+  );
+}
+
+export default App;
