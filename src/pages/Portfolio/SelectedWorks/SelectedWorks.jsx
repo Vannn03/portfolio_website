@@ -33,7 +33,7 @@ const SelectedWorks = ({ motion }) => {
 
   const skills = (color, skillName) => (
     <p
-      className={`rounded-full px-3 py-1 text-sm font-medium ss:text-base sm:px-4 sm:text-lg ${color}`}
+      className={`rounded-full px-3 py-1 text-xs font-semibold uppercase ss:text-sm sm:px-4 sm:text-base ${color}`}
     >
       {skillName}
     </p>
@@ -62,7 +62,7 @@ const SelectedWorks = ({ motion }) => {
         {imageCard("work-images/movie.webp")}
         <div className="w-full px-6 ss:px-8 lg:w-5/12 lg:px-0 xl:w-2/5">
           <div className="flex gap-3 sm:gap-4">
-            {skills("bg-react", "ReactJs")}
+            {skills("bg-react", "React")}
             {skills("bg-tailwind", "Tailwind CSS")}
           </div>
           {workCard(
