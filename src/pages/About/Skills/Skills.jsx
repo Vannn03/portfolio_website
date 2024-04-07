@@ -1,11 +1,17 @@
 const Skills = ({ motion }) => {
   const skillCard = (img, name) => (
     <motion.div
-      className="flex flex-col items-center gap-8 rounded-3xl bg-skill py-8 transition-all hover:scale-105 hover:bg-softPurple"
+      className="flex flex-col items-center gap-8 rounded-3xl bg-skill py-8 transition-all hover:bg-softPurple"
       initial={{ opacity: 0, transform: "translateY(-28px)" }}
       whileInView={{ opacity: 1, transform: "translateY(0)" }}
       transition={{ delay: 0.2 }}
       viewport={{ once: true }}
+      onHoverStart={(event, info) => {
+        event.target.style.transform = "scale(1.05)";
+      }}
+      onHoverEnd={(event, info) => {
+        event.target.style.transform = "scale(1)";
+      }}
     >
       <img
         src={img}
