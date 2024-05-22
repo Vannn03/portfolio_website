@@ -25,18 +25,14 @@ const SelectedWorks = ({ motion }) => {
   const imageCard = (image) => (
     <img
       src={image}
-      alt="movie"
+      alt="..."
       className="h-[300px] w-full object-cover xs:h-[450px] sm:h-[550px] md:h-[650px] lg:h-[750px] lg:w-7/12 xl:w-3/5"
       loading="lazy"
     />
   );
 
-  const skills = (color, skillName) => (
-    <p
-      className={`rounded-full px-3 py-1 text-xs font-semibold uppercase ss:text-sm sm:px-4 sm:text-base ${color}`}
-    >
-      {skillName}
-    </p>
+  const skills = (image) => (
+    <img src={image} alt="..." loading="lazy" className="w-6 xs:w-8 ss:w-10" />
   );
 
   const workCard = (name, description) => (
@@ -61,9 +57,10 @@ const SelectedWorks = ({ motion }) => {
       >
         {imageCard("work-images/movie.webp")}
         <div className="w-full px-6 ss:px-8 lg:w-5/12 lg:px-0 xl:w-2/5">
-          <div className="flex gap-3 sm:gap-4">
-            {skills("bg-react", "React")}
-            {skills("bg-tailwind", "Tailwind CSS")}
+          <div className="flex items-center gap-3 sm:gap-4">
+            {skills("/skill-images/javascript.svg")}
+            {skills("/skill-images/react.svg")}
+            {skills("/skill-images/tailwind.svg")}
           </div>
           {workCard(
             "Movie Peek Website",
@@ -85,9 +82,12 @@ const SelectedWorks = ({ motion }) => {
       >
         {imageCard("work-images/storage.webp")}
         <div className="w-full px-6 ss:px-8 lg:w-5/12 lg:px-0 xl:w-2/5">
-          <div className="flex gap-3 sm:gap-4">
-            {skills("bg-php", "PHP")}
-            {skills("bg-laravel", "Laravel")}
+          <div className="flex items-center gap-3 sm:gap-4">
+            {skills("/skill-images/html.svg")}
+            {skills("/skill-images/bootstrap.svg")}
+            {skills("/skill-images/javascript.svg")}
+            {skills("/skill-images/php.svg")}
+            {skills("/skill-images/laravel.svg")}
           </div>
           {workCard(
             "Goods Data Collection Website",
@@ -112,8 +112,9 @@ const SelectedWorks = ({ motion }) => {
         {imageCard("work-images/event.webp")}
         <div className="w-full px-6 ss:px-8 lg:w-5/12 lg:px-0 xl:w-2/5">
           <div className="flex gap-3 sm:gap-4">
-            {skills("bg-javascript", "JavaScript")}
-            {skills("bg-bootstrap", "Bootstrap")}
+            {skills("/skill-images/html.svg")}
+            {skills("/skill-images/bootstrap.svg")}
+            {skills("/skill-images/javascript.svg")}
           </div>
           {workCard(
             "PuddingFest Event Website",
