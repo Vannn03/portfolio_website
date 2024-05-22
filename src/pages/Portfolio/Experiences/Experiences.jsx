@@ -7,6 +7,7 @@ const Experiences = ({ motion }) => {
         src={link}
         alt="exalter"
         className="size-14 min-h-14 min-w-14 ss:-translate-y-4 sm:min-h-16 sm:min-w-16 sm:-translate-y-5 md:min-h-20 md:min-w-20 md:-translate-y-6"
+        loading="lazy"
       />
       <div className="block ss:hidden">
         <p className="font-semibold tracking-wider text-white/75">{name}</p>
@@ -47,7 +48,11 @@ const Experiences = ({ motion }) => {
             <div className="size-6 rounded-full bg-softPurple drop-shadow-glow sm:size-7" />
             <div className="h-full border-2" />
           </div>
-          {jobDetail("Web Developer Intern", "March 2024 - Now")}
+          {jobDetail(
+            "Web Developer Intern",
+            "March 2024 - Now",
+            "Currently developing a company profile website for Exalter Students & an event website for Inventify Center.",
+          )}
         </div>
       </motion.div>
 
