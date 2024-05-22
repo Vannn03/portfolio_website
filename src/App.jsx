@@ -15,10 +15,6 @@ function App() {
   const selectedWorkRef = useRef(null);
   const contactRef = useRef(null);
 
-  // initial={{ opacity: 0, transform: translateY(-4) }}
-  // whileInView={{ opacity: 1, transform: translateY(0) }}
-  // viewport={{ once: true }}
-
   const subTitle = (title) => (
     <motion.div
       className="px-8 pb-10 ss:px-20"
@@ -49,22 +45,22 @@ function App() {
         <Hero selectedWorkRef={selectedWorkRef} motion={motion} />
       </div>
 
-      <div className="pt-32" ref={portfolioRef}>
+      <div className="pt-20" ref={portfolioRef}>
         {subTitle("Best Skills")}
         <Skills motion={motion} />
       </div>
 
-      <div className="mt-32 bg-secondary py-8" ref={selectedWorkRef}>
+      <div className="mt-20 bg-secondary py-20" ref={selectedWorkRef}>
         {subTitle("Selected Works")}
         <SelectedWorks motion={motion} />
       </div>
 
-      <div className="pt-32">
+      <div className="pt-20">
         {subTitle("Experiences")}
         <Experiences motion={motion} />
       </div>
 
-      <div className="mt-32 bg-secondary py-8" ref={contactRef}>
+      <div className="mt-20 bg-secondary py-20" ref={contactRef}>
         <div className="flex flex-col items-center px-8 pb-10 ss:px-20">
           <motion.div
             initial={{ opacity: 0, transform: "translateX(-40px)" }}

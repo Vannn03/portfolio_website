@@ -2,16 +2,16 @@ import { useState, useEffect } from "react";
 import { TbMenuDeep } from "react-icons/tb";
 import { LiaTimesSolid } from "react-icons/lia";
 
-const Navbar = (props) => {
+const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
   const [activeLink, setActiveLink] = useState("about");
   const [toggleNav, setToggleNav] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const aboutSection = props.aboutRef.current.offsetTop;
-      const portfolioSection = props.portfolioRef.current.offsetTop;
-      const contactSection = props.contactRef.current.offsetTop;
+      const aboutSection = aboutRef.current.offsetTop;
+      const portfolioSection = portfolioRef.current.offsetTop;
+      const contactSection = contactRef.current.offsetTop;
       const scrollPosition = window.scrollY + 100; // considering a buffer of 100px
 
       // Change display for active link based on scroll position
@@ -38,7 +38,7 @@ const Navbar = (props) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [props.aboutRef, props.portfolioRef, props.contactRef]);
+  }, [aboutRef, portfolioRef, contactRef]);
 
   // Detect scroll position and scroll accordingly
   const handleActiveLinkChange = (link, ref) => {
@@ -58,44 +58,38 @@ const Navbar = (props) => {
           <h1 className="text-xl font-extrabold xs:text-2xl">Jovan.</h1>
 
           {/* Default: Navbar */}
-          <nav className="hidden gap-14 ss:flex">
+          <nav className="hidden gap-14 text-white/50 ss:flex">
             <p
               className={`cursor-pointer pb-4 text-lg ${
-                activeLink === "about"
-                  ? "border-b-2 border-softPurple drop-shadow-glow"
-                  : "text-white/50"
+                activeLink === "about" && "text-white"
               }`}
-              onClick={() => handleActiveLinkChange("about", props.aboutRef)}
+              onClick={() => handleActiveLinkChange("about", aboutRef)}
             >
               About
             </p>
             <p
               className={`cursor-pointer pb-4 text-lg ${
-                activeLink === "portfolio"
-                  ? "border-b-2 border-softPurple drop-shadow-glow"
-                  : "text-white/50"
+                activeLink === "portfolio" && "text-white"
               }`}
-              onClick={() =>
-                handleActiveLinkChange("portfolio", props.portfolioRef)
-              }
+              onClick={() => handleActiveLinkChange("portfolio", portfolioRef)}
             >
               Portfolio
             </p>
             <p
               className={`cursor-pointer pb-4 text-lg ${
-                activeLink === "contact"
-                  ? "border-b-2 border-softPurple drop-shadow-glow"
-                  : "text-white/50"
+                activeLink === "contact" && "text-white"
               }`}
-              onClick={() =>
-                handleActiveLinkChange("contact", props.contactRef)
-              }
+              onClick={() => handleActiveLinkChange("contact", contactRef)}
             >
               Contact
             </p>
           </nav>
 
-          <hr className="fixed right-0 top-[77px] z-40 hidden w-[378px] border-white/50 ss:flex" />
+          <hr className="fixed right-0 top-[77px] z-40 hidden w-[391px] border-white/50 ss:flex" />
+
+          <hr
+            className={`fixed top-[74px] z-50 hidden border-2 border-softPurple drop-shadow-glow transition-all ss:flex ${activeLink === "about" ? "right-[311px] w-20" : activeLink === "portfolio" ? "right-[175px] w-28" : activeLink === "contact" && "right-[52px] w-24"}`}
+          />
 
           {/* Responsive: Navigation Menu */}
           <>
@@ -120,47 +114,41 @@ const Navbar = (props) => {
         </div>
 
         {/* Responsive: Navbar */}
-        <nav className={`${toggleNav ? "flex" : "hidden"} flex-col ss:hidden`}>
+        <nav
+          className={`${toggleNav ? "flex" : "hidden"} flex-col text-white/50 ss:hidden`}
+        >
           <p
             className={`w-full cursor-pointer px-8 py-5 text-sm font-light transition-colors hover:bg-softPurple xs:text-base ${
-              activeLink === "about"
-                ? "border-b-2 border-softPurple"
-                : "text-white/50"
+              activeLink === "about" && "text-white"
             }`}
-            onClick={() => handleActiveLinkChange("about", props.aboutRef)}
+            onClick={() => handleActiveLinkChange("about", aboutRef)}
           >
             About
           </p>
           <hr className="border-white/25" />
           <p
             className={`w-full cursor-pointer px-8 py-5 text-sm font-light transition-colors hover:bg-softPurple xs:text-base ${
-              activeLink === "portfolio"
-                ? "border-b-2 border-softPurple"
-                : "text-white/50"
+              activeLink === "portfolio" && "text-white"
             }`}
-            onClick={() =>
-              handleActiveLinkChange("portfolio", props.portfolioRef)
-            }
+            onClick={() => handleActiveLinkChange("portfolio", portfolioRef)}
           >
             Portfolio
           </p>
           <hr className="border-white/25" />
           <p
             className={`w-full cursor-pointer px-8 py-5 text-sm font-light transition-colors hover:bg-softPurple xs:text-base ${
-              activeLink === "contact"
-                ? "border-b-2 border-softPurple"
-                : "text-white/50"
+              activeLink === "contact" && "text-white"
             }`}
-            onClick={() => handleActiveLinkChange("contact", props.contactRef)}
+            onClick={() => handleActiveLinkChange("contact", contactRef)}
           >
             Contact
           </p>
-          <hr className="border-2 border-zinc-900" />
+          <hr className="border-2 border-white/25" />
         </nav>
       </div>
 
       <div
-        className={`z-40 h-dvh w-dvw bg-black/75 transition-colors ss:bg-transparent ${
+        className={`z-40 h-dvh w-dvw bg-black/50 transition-colors ss:bg-transparent ${
           toggleNav ? "flex" : "hidden"
         }`}
       />

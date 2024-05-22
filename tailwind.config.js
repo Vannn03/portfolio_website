@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
-  mode: "jit",
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
@@ -17,20 +16,13 @@ module.exports = {
         navbar: "#27272A",
         footer: "#222527",
         skill: "#414248",
-        react:  "#61DAFB",
-        tailwind:  "#00ACC1",
-        javascript:  "#F0DB4F",
-        bootstrap: "#7C4DFF",
-        php: "#777BB3",
-        laravel: "#F05340"
-
       },
       dropShadow: {
-        glow: "0 0 10px #7B68E4",
+        glow: "0 -4px 10px #7B68E4",
         linkedin: "0 0 10px #0077B5",
         github: "0 0 10px #171515",
         instagram: "0 0 10px #D62976",
-      }
+      },
     },
     screens: {
       xs: "480px",
