@@ -13,10 +13,6 @@ const Skills = ({ motion }) => {
       name: "CSS",
     },
     {
-      url_img: "skill-images/bootstrap.svg",
-      name: "Bootstrap",
-    },
-    {
       url_img: "skill-images/javascript.svg",
       name: "JavaScript",
     },
@@ -30,11 +26,7 @@ const Skills = ({ motion }) => {
     },
     {
       url_img: "skill-images/next-js.svg",
-      name: "NextJs",
-    },
-    {
-      url_img: "skill-images/typescript.svg",
-      name: "TypeScript",
+      name: "Next.js",
     },
   ];
 
@@ -59,7 +51,7 @@ const Skills = ({ motion }) => {
             src={data.url_img}
             alt="..."
             loading="lazy"
-            className="w-16 xs:w-24 ss:w-36"
+            className="h-16 w-16 xs:h-24 xs:w-24 ss:h-36 ss:w-36"
           />
           <h1 className="text-base font-semibold xs:text-lg ss:text-xl">
             {data.name}

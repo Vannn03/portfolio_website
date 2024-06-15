@@ -18,10 +18,13 @@ export default {
         skill: "#414248",
       },
       dropShadow: {
-        glow: "0 -4px 10px #7B68E4",
         linkedin: "0 0 10px #0077B5",
         github: "0 0 10px #171515",
         instagram: "0 0 10px #D62976",
+      },
+      boxShadow: {
+        "work-box-glow": "0 0 20px #7B68E4",
+        "nav-line-glow": "0 -4px 20px #7B68E4",
       },
     },
     screens: {

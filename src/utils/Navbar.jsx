@@ -58,7 +58,7 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
           <h1 className="text-xl font-extrabold xs:text-2xl">Jovan.</h1>
 
           {/* Default: Navbar */}
-          <nav className="hidden gap-14 text-white/50 ss:flex">
+          <nav className="relative hidden gap-14 border-b border-white/35 text-white/75 ss:flex">
             <p
               className={`cursor-pointer pb-4 text-lg ${
                 activeLink === "about" && "text-white"
@@ -83,13 +83,11 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
             >
               Contact
             </p>
+
+            <hr
+              className={`shadow-nav-line-glow absolute top-10 z-50 hidden border-2 border-softPurple transition-all ss:flex ${activeLink === "about" ? "left-0 w-14" : activeLink === "portfolio" ? "left-[110px] w-[76px]" : activeLink === "contact" && "left-[243px] w-[72px]"}`}
+            />
           </nav>
-
-          <hr className="fixed right-0 top-[77px] z-40 hidden w-[391px] border-white/50 ss:flex" />
-
-          <hr
-            className={`fixed top-[74px] z-50 hidden border-2 border-softPurple drop-shadow-glow transition-all ss:flex ${activeLink === "about" ? "right-[311px] w-20" : activeLink === "portfolio" ? "right-[175px] w-28" : activeLink === "contact" && "right-[52px] w-24"}`}
-          />
 
           {/* Responsive: Navigation Menu */}
           <>

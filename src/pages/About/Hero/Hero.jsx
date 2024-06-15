@@ -42,7 +42,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <p className="mt-6 text-base font-light text-white/50 xs:mt-8 xs:text-lg sm:mt-10 sm:text-xl md:text-lg lg:text-xl">
+          <p className="mt-6 text-base font-light text-white/75 xs:mt-8 xs:text-lg sm:mt-10 sm:text-xl md:text-lg lg:text-xl">
             I’m burning with passion for crafting immersive online experiences
             and bringing creative ideas to life through code.
           </p>

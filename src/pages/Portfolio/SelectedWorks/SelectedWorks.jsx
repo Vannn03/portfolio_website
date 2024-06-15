@@ -1,135 +1,109 @@
 import { FaGithub } from "react-icons/fa6";
 import { RxArrowTopRight } from "react-icons/rx";
 
-const SelectedWorks = ({ motion }) => {
-  const githubButton = (link) => (
-    <a
-      href={link}
-      target="_blank"
-      className="flex items-center justify-center rounded-md bg-github px-6 py-3 text-sm font-medium xs:justify-start ss:text-base sm:text-lg"
-    >
-      <FaGithub className="mr-2" /> View Repository
-    </a>
-  );
-
-  const demoButton = (link, disable) => (
-    <a
-      href={link}
-      target="_blank"
-      className={`flex items-center justify-center rounded-md bg-softPurple px-6 py-3 text-sm font-medium xs:justify-start ss:text-base sm:text-lg ${disable}`}
-    >
-      View Demo <RxArrowTopRight className="ml-2" />
-    </a>
-  );
-
-  const imageCard = (image) => (
-    <img
-      src={image}
-      alt="..."
-      className="h-[300px] w-full object-cover xs:h-[450px] sm:h-[550px] md:h-[650px] lg:h-[750px] lg:w-7/12 xl:w-3/5"
-      loading="lazy"
-    />
-  );
-
-  const skills = (image) => (
-    <img src={image} alt="..." loading="lazy" className="w-6 xs:w-8 ss:w-10" />
-  );
-
-  const workCard = (name, description) => (
-    <>
-      <h1 className="mt-3 text-2xl font-bold ss:text-3xl sm:text-4xl lg:mt-4">
-        {name}
-      </h1>
-      <p className="mt-5 text-sm font-light text-white/50 ss:text-base sm:mt-6 sm:text-lg lg:mt-8">
-        {description}
-      </p>
-    </>
-  );
+const SelectedWork2 = ({ motion }) => {
+  const worksData = [
+    {
+      url_image: "work-images/movie.webp",
+      url_icons: [
+        "/skill-images/javascript.svg",
+        "/skill-images/next-js.svg",
+        "/skill-images/tailwind.svg",
+        "/skill-images/prisma.svg",
+      ],
+      title: "Movie Peek Website",
+      description:
+        "A personal movie database website for users to freely access trailers & details of various movies using API data from TMDB.",
+      url_repository: "https://github.com/Vannn03/movie_peek",
+      url_demo: "https://movie-peek.vercel.app",
+    },
+    {
+      url_image: "work-images/storage.webp",
+      url_icons: [
+        "/skill-images/bootstrap.svg",
+        "/skill-images/javascript.svg",
+        "/skill-images/php.svg",
+        "/skill-images/laravel.svg",
+      ],
+      title: "Goods Data Collection Website",
+      description:
+        "Built a goods data collection website for selling goods that require CRUD & validation, authentication for both user & admin roles, and relationships between certain models.",
+      url_repository:
+        "https://github.com/Vannn03/Goods-Data-Collection-Website",
+      url_demo: "",
+    },
+    {
+      url_image: "work-images/event.webp",
+      url_icons: [
+        "/skill-images/html.svg",
+        "/skill-images/bootstrap.svg",
+        "/skill-images/javascript.svg",
+      ],
+      title: "PuddingFest Event Website",
+      description:
+        "Built a responsive online event website called 'PuddingFest' for event participants who wish to register and see various event series.",
+      url_repository: "https://github.com/Vannn03/PuddingFest-Event-Website",
+      url_demo: "https://vannn03.github.io/PuddingFest-Event-Website",
+    },
+  ];
 
   return (
-    <div className="flex flex-col gap-12 px-8 ss:px-20">
-      <motion.div
-        className="flex flex-col items-center gap-6 border-2 border-white/50 pb-6 pr-0 ss:gap-8 ss:pb-8 lg:flex-row lg:pb-0 lg:pr-8"
-        initial={{ opacity: 0, transform: "translateY(-28px)" }}
-        whileInView={{ opacity: 1, transform: "translateY(0)" }}
-        transition={{ delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        {imageCard("work-images/movie.webp")}
-        <div className="w-full px-6 ss:px-8 lg:w-5/12 lg:px-0 xl:w-2/5">
-          <div className="flex items-center gap-3 sm:gap-4">
-            {skills("/skill-images/javascript.svg")}
-            {skills("/skill-images/react.svg")}
-            {skills("/skill-images/tailwind.svg")}
+    <div className="flex flex-col gap-6 px-8 ss:px-20 sm:gap-12">
+      {worksData.map((data, index) => (
+        <motion.div
+          key={index}
+          className={`flex flex-col items-center border-2 border-white/50 ${index == 1 ? "md:flex-row-reverse" : "md:flex-row"} hover:shadow-work-box-glow transition-shadow`}
+          initial={{ opacity: 0, transform: "translateY(-28px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0)" }}
+          transition={{ delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <img
+            src={data.url_image}
+            alt="..."
+            className="aspect-video w-full object-cover md:h-[580px] md:w-2/5 xl:w-3/5"
+            loading="lazy"
+          />
+          <div className="flex flex-col gap-4 p-4 xs:p-6 sm:p-8 md:gap-6">
+            <div className="flex items-center gap-4">
+              {data.url_icons.map((icon, iconIndex) => (
+                <img
+                  key={iconIndex}
+                  src={icon}
+                  alt="..."
+                  loading="lazy"
+                  className="w-6 md:w-8"
+                  title={icon.replace("/skill-images/", "").replace(".svg", "")}
+                />
+              ))}
+            </div>
+            <h1 className="text-xl font-semibold xs:text-2xl md:text-3xl">
+              {data.title}
+            </h1>
+            <p className="text-sm font-light text-white/75 xs:text-base md:text-lg ">
+              {data.description}
+            </p>
+            <div className="mt-2 flex flex-col gap-3 xs:flex-row xs:gap-4">
+              <a
+                href={data.url_repository}
+                target="_blank"
+                className="flex items-center justify-center rounded-md bg-github px-6 py-3 text-sm font-medium ss:text-base md:text-lg"
+              >
+                <FaGithub className="mr-2" /> View Repository
+              </a>
+              <a
+                href={data.url_demo}
+                target="_blank"
+                className={`flex items-center justify-center rounded-md bg-softPurple px-6 py-3 text-sm font-medium ss:text-base md:text-lg`}
+              >
+                View Demo <RxArrowTopRight className="ml-2" />
+              </a>
+            </div>
           </div>
-          {workCard(
-            "Movie Peek Website",
-            "A personal movie database website for users to freely access trailers & details of various movies using API data from TMDB.",
-          )}
-          <div className="mt-5 flex flex-col gap-4 xs:flex-row xs:gap-5 sm:mt-6 lg:mt-8">
-            {githubButton("https://github.com/Vannn03/movie_peek")}
-            {demoButton("https://movie-peek.vercel.app")}
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="flex flex-col items-center gap-6 border-2 border-white/50 pb-6 pl-0 ss:gap-8 ss:pb-8 lg:flex-row-reverse lg:pb-0 lg:pl-8"
-        initial={{ opacity: 0, transform: "translateY(-28px)" }}
-        whileInView={{ opacity: 1, transform: "translateY(0)" }}
-        transition={{ delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        {imageCard("work-images/storage.webp")}
-        <div className="w-full px-6 ss:px-8 lg:w-5/12 lg:px-0 xl:w-2/5">
-          <div className="flex items-center gap-3 sm:gap-4">
-            {skills("/skill-images/html.svg")}
-            {skills("/skill-images/bootstrap.svg")}
-            {skills("/skill-images/javascript.svg")}
-            {skills("/skill-images/php.svg")}
-            {skills("/skill-images/laravel.svg")}
-          </div>
-          {workCard(
-            "Goods Data Collection Website",
-            "Built a goods data collection website for selling goods that require CRUD & validation, authentication for both user & admin roles, and relationships between certain models.",
-          )}
-          <div className="mt-5 flex flex-col gap-4 xs:flex-row xs:gap-5 sm:mt-6 lg:mt-8">
-            {githubButton(
-              "https://github.com/Vannn03/Goods-Data-Collection-Website",
-            )}
-            {demoButton(null, "opacity-50 cursor-not-allowed")}
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="flex flex-col items-center gap-6 border-2 border-white/50 pb-6 pr-0 ss:gap-8 ss:pb-8 lg:flex-row lg:pb-0 lg:pr-8"
-        initial={{ opacity: 0, transform: "translateY(-28px)" }}
-        whileInView={{ opacity: 1, transform: "translateY(0)" }}
-        transition={{ delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        {imageCard("work-images/event.webp")}
-        <div className="w-full px-6 ss:px-8 lg:w-5/12 lg:px-0 xl:w-2/5">
-          <div className="flex gap-3 sm:gap-4">
-            {skills("/skill-images/html.svg")}
-            {skills("/skill-images/bootstrap.svg")}
-            {skills("/skill-images/javascript.svg")}
-          </div>
-          {workCard(
-            "PuddingFest Event Website",
-            "Built a responsive online event website called 'PuddingFest' for event participants who wish to register and see various event series.",
-          )}
-          <div className="mt-5 flex flex-col gap-4 xs:flex-row xs:gap-5 sm:mt-6 lg:mt-8">
-            {githubButton(
-              "https://github.com/Vannn03/PuddingFest-Event-Website",
-            )}
-            {demoButton("https://vannn03.github.io/PuddingFest-Event-Website/")}
-          </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      ))}
     </div>
   );
 };
 
-export default SelectedWorks;
+export default SelectedWork2;
