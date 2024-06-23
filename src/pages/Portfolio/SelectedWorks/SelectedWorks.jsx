@@ -30,7 +30,6 @@ const SelectedWork2 = ({ motion }) => {
         "Built a goods data collection website for selling goods that require CRUD & validation, authentication for both user & admin roles, and relationships between certain models.",
       url_repository:
         "https://github.com/Vannn03/Goods-Data-Collection-Website",
-      url_demo: "",
     },
     {
       url_image: "work-images/event.webp",
@@ -52,7 +51,7 @@ const SelectedWork2 = ({ motion }) => {
       {worksData.map((data, index) => (
         <motion.div
           key={index}
-          className={`flex flex-col items-center border-2 border-white/50 ${index == 1 ? "md:flex-row-reverse" : "md:flex-row"} hover:shadow-work-box-glow transition-shadow`}
+          className={`flex flex-col items-center border-2 border-white/50 ${index == 1 ? "md:flex-row-reverse" : "md:flex-row"} transition-shadow hover:shadow-work-box-glow`}
           initial={{ opacity: 0, transform: "translateY(-28px)" }}
           whileInView={{ opacity: 1, transform: "translateY(0)" }}
           transition={{ delay: 0.2 }}
@@ -94,7 +93,7 @@ const SelectedWork2 = ({ motion }) => {
               <a
                 href={data.url_demo}
                 target="_blank"
-                className={`flex items-center justify-center rounded-md bg-softPurple px-6 py-3 text-sm font-medium ss:text-base md:text-lg`}
+                className={`flex items-center justify-center rounded-md bg-softPurple px-6 py-3 text-sm font-medium ss:text-base md:text-lg ${index == 1 && "cursor-not-allowed opacity-50"}`}
               >
                 View Demo <RxArrowTopRight className="ml-2" />
               </a>
