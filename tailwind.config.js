@@ -25,6 +25,7 @@ export default {
       boxShadow: {
         "work-box-glow": "0 0 20px #7B68E4",
         "nav-line-glow": "0 -4px 20px #7B68E4",
+        "experience-circle-glow": "0 0 10px #7B68E4",
       },
     },
     screens: {
