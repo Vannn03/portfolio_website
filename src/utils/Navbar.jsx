@@ -49,7 +49,7 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
   return (
     <>
       <div
-        className={`z-50 flex flex-col transition-colors ${
+        className={`z-50 flex flex-col ${
           toggleNav ? "bg-navbar" : scrolling ? "bg-navbar" : "bg-transparent"
         }`}
       >
@@ -85,7 +85,7 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
             </p>
 
             <hr
-              className={`shadow-nav-line-glow absolute top-10 z-50 hidden border-2 border-softPurple transition-all ss:flex ${activeLink === "about" ? "left-0 w-14" : activeLink === "portfolio" ? "left-[110px] w-[76px]" : activeLink === "contact" && "left-[243px] w-[72px]"}`}
+              className={`absolute top-10 z-50 hidden border-2 border-softPurple shadow-nav-line-glow transition-all ss:flex ${activeLink === "about" ? "left-0 w-14" : activeLink === "portfolio" ? "left-[110px] w-[76px]" : activeLink === "contact" && "left-[243px] w-[72px]"}`}
             />
           </nav>
 
