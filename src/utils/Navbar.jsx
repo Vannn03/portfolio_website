@@ -49,7 +49,7 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
   return (
     <>
       <div
-        className={`z-50 flex flex-col ${
+        className={`z-50 flex flex-col transition-colors ${
           toggleNav ? "bg-navbar" : scrolling ? "bg-navbar" : "bg-transparent"
         }`}
       >

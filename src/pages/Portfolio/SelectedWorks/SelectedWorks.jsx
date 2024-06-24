@@ -10,6 +10,9 @@ const SelectedWork2 = ({ motion }) => {
         "/skill-images/next-js.svg",
         "/skill-images/tailwind.svg",
         "/skill-images/prisma.svg",
+        "/skill-images/mysql.svg",
+        "/skill-images/cloudinary.svg",
+        "/skill-images/aiven.svg",
       ],
       title: "Movie Peek Website",
       description:
@@ -64,14 +67,14 @@ const SelectedWork2 = ({ motion }) => {
             loading="lazy"
           />
           <div className="flex flex-col gap-4 p-4 xs:p-6 sm:p-8 md:gap-6">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 xs:gap-4">
               {data.url_icons.map((icon, iconIndex) => (
                 <img
                   key={iconIndex}
                   src={icon}
                   alt="..."
                   loading="lazy"
-                  className="w-6 md:w-8"
+                  className="aspect-square w-6 md:w-8"
                   title={icon.replace("/skill-images/", "").replace(".svg", "")}
                 />
               ))}

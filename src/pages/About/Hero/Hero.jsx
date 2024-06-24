@@ -22,16 +22,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
         >
           <p>Hi, I'm</p>
           <TypeAnimation
-            sequence={[
-              "Jovan Hermawan",
-              3000,
-              "from Jakarta, Indonesia",
-              3000,
-              "studying at BINUS University",
-              3000,
-              "majoring in IS Management",
-              3000,
-            ]}
+            sequence={["Jovan Hermawan", 3000, "a Binusian 25", 3000]}
             wrapper="span"
             speed={60}
             repeat={Infinity}
@@ -45,7 +36,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-4xl font-bold text-softPurple brightness-105 xs:text-5xl sm:text-7xl md:text-5xl lg:text-7xl">
+          <h1 className="text-4xl font-bold text-softPurple xs:text-5xl sm:text-7xl md:text-5xl lg:text-7xl">
             Enthusiastic
           </h1>
           <h1 className="mt-2 text-4xl font-bold xs:text-5xl sm:mt-3 sm:text-7xl md:text-5xl lg:text-7xl">
@@ -59,7 +50,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <p className="mt-6 text-base font-light text-white/75 xs:mt-8 xs:text-lg sm:mt-10 sm:text-xl md:text-lg lg:text-xl">
+          <p className="mt-6 font-light text-white/75 xs:mt-8 xs:text-lg sm:mt-10 sm:text-xl md:text-lg lg:text-xl">
             I’m burning with passion for crafting immersive online experiences
             and bringing creative ideas to life through code.
           </p>

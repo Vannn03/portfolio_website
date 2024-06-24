@@ -113,7 +113,9 @@ const Skills = ({ motion }) => {
       </div>
 
       <div className="mt-10">
-        <h1 className="mb-4 text-2xl font-semibold text-white/75">Others:</h1>
+        <h1 className="mb-4 text-xl font-semibold text-white/75 xs:text-2xl">
+          Others:
+        </h1>
         <div className="grid grid-cols-2 gap-4 xs:grid-cols-3 xs:gap-6 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 ">
           {otherSkillData.map((data, index) => (
             <motion.div
