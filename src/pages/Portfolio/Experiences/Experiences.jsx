@@ -9,10 +9,9 @@ const Experiences = ({ motion }) => {
         className="size-14 min-h-14 min-w-14 ss:-translate-y-4 sm:min-h-16 sm:min-w-16 sm:-translate-y-5 md:min-h-20 md:min-w-20 md:-translate-y-6"
         loading="lazy"
       />
-      <div className="block ss:hidden">
-        <p className="font-semibold tracking-wider text-white/75">{name}</p>
-        <p className="mt-1 text-sm font-medium text-white/50">{date}</p>
-      </div>
+      <p className="font-semibold tracking-wider text-white/75 ss:hidden">
+        {name}
+      </p>
     </div>
   );
 
@@ -21,10 +20,10 @@ const Experiences = ({ motion }) => {
       <h1 className="pr-3 text-lg font-semibold xs:text-xl sm:text-2xl">
         {position}
       </h1>
-      <p className="mt-2 text-sm font-medium text-white/35 sm:text-base">
+      <p className="text-sm font-medium italic text-white/35 sm:text-base">
         {date}
       </p>
-      <p className="mt-4 pb-8 pr-3 text-sm font-light text-white/75 sm:text-base">
+      <p className="mt-4 pb-8 pr-3 text-sm font-light leading-normal text-white/75 sm:text-base">
         {description}
       </p>
     </div>
@@ -43,9 +42,9 @@ const Experiences = ({ motion }) => {
       >
         {image("experience-images/GDSC.webp", "Google Developer Student Club")}
 
-        <div className="flex translate-x-3 gap-6 ss:translate-x-0 sm:gap-8">
+        <div className="flex translate-x-[14px] gap-6 ss:translate-x-0 sm:gap-8">
           <div className="flex flex-col items-center">
-            <div className="shadow-experience-circle-glow size-6 rounded-full bg-softPurple sm:size-7" />
+            <div className="size-6 rounded-full bg-softPurple shadow-experience-circle-glow sm:size-7" />
             <div className="h-full border-2" />
           </div>
           {jobDetail(
@@ -66,9 +65,9 @@ const Experiences = ({ motion }) => {
       >
         {image("experience-images/exalter.webp", "Exalter Students")}
 
-        <div className="flex translate-x-3 gap-6 ss:translate-x-0 sm:gap-8">
+        <div className="flex translate-x-[14px] gap-6 ss:translate-x-0 sm:gap-8">
           <div className="flex flex-col items-center">
-            <div className="shadow-experience-circle-glow size-6 rounded-full bg-softPurple sm:size-7" />
+            <div className="size-6 rounded-full bg-softPurple shadow-experience-circle-glow sm:size-7" />
             <div className="h-full border-2" />
           </div>
           {jobDetail(
@@ -109,10 +108,10 @@ const Experiences = ({ motion }) => {
           "Bina Nusantara Computer Club",
           "2 years 2 months",
         )}
-        <div className="flex translate-x-3 flex-col ss:translate-x-0">
+        <div className="flex translate-x-[14px] flex-col ss:translate-x-0">
           <div className="flex gap-8">
             <div className="flex flex-col items-center">
-              <div className="shadow-experience-circle-glow size-6 rounded-full bg-softPurple sm:size-7" />
+              <div className="size-6 rounded-full bg-softPurple shadow-experience-circle-glow sm:size-7" />
               <div className="h-full border-2" />
             </div>
             {jobDetail(
@@ -124,7 +123,7 @@ const Experiences = ({ motion }) => {
 
           <div className="flex gap-8">
             <div className="flex flex-col items-center">
-              <div className="shadow-experience-circle-glow size-6 rounded-full bg-softPurple sm:size-7" />
+              <div className="size-6 rounded-full bg-softPurple shadow-experience-circle-glow sm:size-7" />
               <div className="h-full border-2" />
             </div>
             {jobDetail(

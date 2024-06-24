@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { TbMenuDeep } from "react-icons/tb";
-import { LiaTimesSolid } from "react-icons/lia";
+import ResponsiveNavMenu from "../components/ResponsiveNavMenu";
+import ResponsiveNavLinks from "../components/ResponsiveNavLinks";
 
 const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
   const [activeLink, setActiveLink] = useState("about");
@@ -41,8 +41,8 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
   }, [aboutRef, portfolioRef, contactRef]);
 
   // Detect scroll position and scroll accordingly
-  const handleActiveLinkChange = (link, ref) => {
-    setActiveLink(link);
+  const handleActiveLinkChange = (route, ref) => {
+    setActiveLink(route);
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -89,60 +89,20 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
             />
           </nav>
 
-          {/* Responsive: Navigation Menu */}
-          <>
-            <TbMenuDeep
-              className={`flex size-8 cursor-pointer xs:size-9 ss:hidden ${
-                toggleNav ? "hidden" : "flex"
-              }`}
-              onClick={() => {
-                setToggleNav((prev) => !prev);
-              }}
-            />
-
-            <LiaTimesSolid
-              className={`size-8 cursor-pointer xs:size-9 ss:hidden ${
-                toggleNav === true ? "flex" : "hidden"
-              }`}
-              onClick={() => {
-                setToggleNav((prev) => !prev);
-              }}
-            />
-          </>
+          <ResponsiveNavMenu
+            toggleNav={toggleNav}
+            setToggleNav={setToggleNav}
+          />
         </div>
 
-        {/* Responsive: Navbar */}
-        <nav
-          className={`${toggleNav ? "flex" : "hidden"} flex-col text-white/50 ss:hidden`}
-        >
-          <p
-            className={`w-full cursor-pointer px-8 py-5 text-sm font-light transition-colors hover:bg-softPurple xs:text-base ${
-              activeLink === "about" && "text-white"
-            }`}
-            onClick={() => handleActiveLinkChange("about", aboutRef)}
-          >
-            About
-          </p>
-          <hr className="border-white/25" />
-          <p
-            className={`w-full cursor-pointer px-8 py-5 text-sm font-light transition-colors hover:bg-softPurple xs:text-base ${
-              activeLink === "portfolio" && "text-white"
-            }`}
-            onClick={() => handleActiveLinkChange("portfolio", portfolioRef)}
-          >
-            Portfolio
-          </p>
-          <hr className="border-white/25" />
-          <p
-            className={`w-full cursor-pointer px-8 py-5 text-sm font-light transition-colors hover:bg-softPurple xs:text-base ${
-              activeLink === "contact" && "text-white"
-            }`}
-            onClick={() => handleActiveLinkChange("contact", contactRef)}
-          >
-            Contact
-          </p>
-          <hr className="border-2 border-white/25" />
-        </nav>
+        <ResponsiveNavLinks
+          toggleNav={toggleNav}
+          activeLink={activeLink}
+          handleActiveLinkChange={handleActiveLinkChange}
+          aboutRef={aboutRef}
+          portfolioRef={portfolioRef}
+          contactRef={contactRef}
+        />
       </div>
 
       <div
