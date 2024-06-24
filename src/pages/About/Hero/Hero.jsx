@@ -1,6 +1,7 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = ({ selectedWorkRef, motion }) => {
   const handleScroll = (ref) => {
@@ -15,10 +16,26 @@ const Hero = ({ selectedWorkRef, motion }) => {
           initial={{ opacity: 0, transform: "translateX(-40px)" }}
           whileInView={{ opacity: 1, transform: "translateX(0)" }}
           viewport={{ once: true }}
+          className={
+            "flex gap-1 text-lg font-semibold text-white/75 xs:text-xl sm:text-2xl  md:text-xl lg:text-2xl"
+          }
         >
-          <p className="text-lg font-semibold xs:text-xl sm:text-2xl md:text-xl lg:text-2xl">
-            Hi, I'm Jovan Hermawan
-          </p>
+          <p>Hi, I'm</p>
+          <TypeAnimation
+            sequence={[
+              "Jovan Hermawan",
+              3000,
+              "from Jakarta, Indonesia",
+              3000,
+              "studying at BINUS University",
+              3000,
+              "majoring in IS Management",
+              3000,
+            ]}
+            wrapper="span"
+            speed={60}
+            repeat={Infinity}
+          />
         </motion.div>
 
         <motion.div
@@ -28,7 +45,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-4xl font-bold text-softPurple xs:text-5xl sm:text-7xl md:text-5xl lg:text-7xl">
+          <h1 className="text-4xl font-bold text-softPurple brightness-105 xs:text-5xl sm:text-7xl md:text-5xl lg:text-7xl">
             Enthusiastic
           </h1>
           <h1 className="mt-2 text-4xl font-bold xs:text-5xl sm:mt-3 sm:text-7xl md:text-5xl lg:text-7xl">
@@ -74,13 +91,21 @@ const Hero = ({ selectedWorkRef, motion }) => {
       {/* Social Medias */}
       <div className="absolute bottom-12 flex items-center gap-6 lg:gap-8">
         <hr className="w-24 border-white/50 ss:w-40 lg:w-52" />
-        <a href="https://www.linkedin.com/in/jovan-hermawan" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/jovan-hermawan"
+          target="_blank"
+          title="linkedin"
+        >
           <FaLinkedin className="size-6 transition-colors hover:text-linkedin hover:drop-shadow-linkedin ss:size-7" />
         </a>
-        <a href="https://github.com/Vannn03" target="_blank">
+        <a href="https://github.com/Vannn03" target="_blank" title="github">
           <FaGithub className="size-6 transition-colors hover:text-github hover:drop-shadow-github ss:size-7" />
         </a>
-        <a href="https://instagram.com/jovanhermawan" target="_blank">
+        <a
+          href="https://instagram.com/jovanhermawan"
+          target="_blank"
+          title="instagram"
+        >
           <RiInstagramFill className="size-6 transition-colors hover:text-instagram hover:drop-shadow-instagram ss:size-7" />
         </a>
       </div>
