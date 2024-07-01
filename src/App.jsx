@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./App.css";
 import Hero from "./pages/About/Hero/Hero";
@@ -6,11 +6,12 @@ import Skills from "./pages/About/Skills/Skills";
 import Contact from "./pages/Contact/Contact";
 import Experiences from "./pages/Portfolio/Experiences/Experiences";
 import SelectedWorks from "./pages/Portfolio/SelectedWorks/SelectedWorks";
-
 import Footer from "./utils/Footer";
 import Navbar from "./utils/Navbar";
+import ThemeToggler from "./components/ThemeToggler";
 
 function App() {
+  const [theme, setTheme] = useState(false); // false = dark
   const aboutRef = useRef(null);
   const portfolioRef = useRef(null);
   const selectedWorkRef = useRef(null);
@@ -25,15 +26,17 @@ function App() {
       viewport={{ once: true }}
     >
       <p className="text-xl font-semibold xs:text-2xl ss:text-3xl">My</p>
-      <h1 className="mt-0 text-3xl font-bold text-softPurple xs:mt-1 xs:text-4xl ss:text-5xl">
+      <h1 className="text-accent mt-0 text-3xl font-bold xs:mt-1 xs:text-4xl ss:text-5xl">
         {title}
       </h1>
-      <div className="w mt-4 w-24 border-4 border-softPurple xs:mt-5 xs:w-28 ss:w-36" />
+      <div className="w border-accent mt-4 w-24 border-4 xs:mt-5 xs:w-28 ss:w-36" />
     </motion.div>
   );
 
   return (
-    <div className="font-bvp">
+    <div
+      className={`bg-primary text-text ${theme ? "light" : "dark"} transition-color font-bvp duration-200 `}
+    >
       <header className="fixed top-0 z-50">
         <Navbar
           aboutRef={aboutRef}
@@ -74,7 +77,7 @@ function App() {
             </h1>
           </motion.div>
           <motion.div
-            className="w mt-4 w-24 border-4 border-softPurple xs:mt-5 xs:w-28 ss:w-36"
+            className="w border-accent mt-4 w-24 border-4 xs:mt-5 xs:w-28 ss:w-36"
             initial={{ opacity: 0, transform: "translateX(40px)" }}
             whileInView={{ opacity: 1, transform: "translateX(0)" }}
             transition={{ delay: 0.2 }}
@@ -83,6 +86,9 @@ function App() {
         </div>
         <Contact motion={motion} />
       </div>
+
+      {/* theme toggler */}
+      <ThemeToggler setTheme={setTheme} theme={theme} />
 
       <footer className="bg-footer text-center">
         <Footer />

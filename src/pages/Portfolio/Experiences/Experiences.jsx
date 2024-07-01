@@ -74,7 +74,7 @@ const Experiences = ({ motion }) => {
           key={index}
         >
           {index == experienceData.length - 1 ? (
-            <div className="fade-bg absolute top-0 z-10 h-full w-full" />
+            <div className="bg-experience-fade absolute top-0 z-10 h-full w-full" />
           ) : null}
 
           <div className="flex items-center gap-4">
@@ -84,7 +84,7 @@ const Experiences = ({ motion }) => {
               className="w-16 rounded-sm"
               loading="lazy"
             />
-            <p className="text-sm font-medium tracking-wider text-white/75 xs:text-base">
+            <p className="text-text/75 text-sm font-medium tracking-wider xs:text-base">
               {data.company_name}
             </p>
           </div>
@@ -93,17 +93,17 @@ const Experiences = ({ motion }) => {
             {data.job_detail.map((detail, index2) => (
               <div className="flex gap-4 xs:gap-6" key={index2}>
                 <div className="flex flex-col items-center">
-                  <div className="size-5 rounded-full bg-softPurple shadow-experience-circle-glow sm:h-7 sm:w-6" />
-                  <div className="h-full border border-white/35" />
+                  <div className="bg-accent size-5 rounded-full shadow-experience-circle-glow sm:h-7 sm:w-6" />
+                  <div className="border-text/35 h-full border" />
                 </div>
                 <div className="flex -translate-y-1 flex-col">
                   <h1 className="text-lg font-semibold xs:text-xl sm:text-2xl">
                     {detail.position}
                   </h1>
-                  <p className="text-sm font-medium italic text-white/35 sm:text-base">
+                  <p className="text-text/35 text-sm font-medium italic sm:text-base">
                     {detail.date}
                   </p>
-                  <p className="mt-4 pb-8 text-sm font-light leading-normal text-white/75 sm:text-base">
+                  <p className="text-text/75 mt-4 pb-8 text-sm font-light leading-normal sm:text-base">
                     {detail.description}
                   </p>
                 </div>
@@ -116,7 +116,7 @@ const Experiences = ({ motion }) => {
       <a
         href="https://www.linkedin.com/in/jovan-hermawan"
         target="_blank"
-        className="flex items-center justify-center rounded-md bg-linkedin px-6  py-3 text-sm font-medium xs:text-base sm:text-lg"
+        className="flex items-center justify-center rounded-md bg-linkedin px-6  py-3 text-sm font-medium text-white xs:text-base sm:text-lg"
       >
         <FaLinkedin className="mr-2" /> View More on Linkedin
       </a>

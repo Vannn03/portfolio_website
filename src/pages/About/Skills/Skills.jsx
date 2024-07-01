@@ -87,7 +87,7 @@ const Skills = ({ motion }) => {
         {skillData.map((data, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center gap-8 rounded-3xl bg-skill py-8 transition-all hover:bg-softPurple"
+            className="hover:bg-accent/75 flex flex-col items-center gap-8 rounded-3xl bg-skill py-8 transition-all"
             initial={{ opacity: 0, transform: "translateY(-28px)" }}
             whileInView={{ opacity: 1, transform: "translateY(0)" }}
             transition={{ delay: 0.2 }}
@@ -113,14 +113,14 @@ const Skills = ({ motion }) => {
       </div>
 
       <div className="mt-10">
-        <h1 className="mb-4 text-xl font-semibold text-white/75 xs:text-2xl">
+        <h1 className="text-text/75 mb-4 text-xl font-semibold xs:text-2xl">
           Others:
         </h1>
         <div className="grid grid-cols-2 gap-4 xs:grid-cols-3 xs:gap-6 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 ">
           {otherSkillData.map((data, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center gap-4 rounded-3xl bg-skill py-4 transition-all hover:bg-softPurple"
+              className="hover:bg-accent/75 flex flex-col items-center gap-4 rounded-3xl bg-skill py-4 transition-all"
               initial={{ opacity: 0, transform: "translateY(-28px)" }}
               whileInView={{ opacity: 1, transform: "translateY(0)" }}
               transition={{ delay: 0.2 }}

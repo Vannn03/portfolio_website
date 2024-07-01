@@ -54,7 +54,7 @@ const SelectedWork2 = ({ motion }) => {
       {worksData.map((data, index) => (
         <motion.div
           key={index}
-          className={`flex flex-col items-center border-2 border-white/50 ${index == 1 ? "md:flex-row-reverse" : "md:flex-row"} transition-shadow hover:shadow-work-box-glow`}
+          className={`border-text/50 flex flex-col items-center border-2 ${index == 1 ? "md:flex-row-reverse" : "md:flex-row"} transition-shadow hover:shadow-work-box-glow`}
           initial={{ opacity: 0, transform: "translateY(-28px)" }}
           whileInView={{ opacity: 1, transform: "translateY(0)" }}
           transition={{ delay: 0.2 }}
@@ -82,21 +82,21 @@ const SelectedWork2 = ({ motion }) => {
             <h1 className="text-xl font-semibold xs:text-2xl md:text-3xl">
               {data.title}
             </h1>
-            <p className="text-sm font-light text-white/75 xs:text-base md:text-lg ">
+            <p className="text-text/75 text-sm font-light xs:text-base md:text-lg ">
               {data.description}
             </p>
             <div className="mt-2 flex flex-col gap-3 xs:flex-row xs:gap-4">
               <a
                 href={data.url_repository}
                 target="_blank"
-                className="flex items-center justify-center rounded-md bg-github px-6 py-3 text-sm font-medium ss:text-base md:text-lg"
+                className="flex items-center justify-center rounded-md bg-github px-6 py-3 text-sm font-medium text-white ss:text-base md:text-lg"
               >
                 <FaGithub className="mr-2" /> View Repository
               </a>
               <a
                 href={data.url_demo}
                 target="_blank"
-                className={`flex items-center justify-center rounded-md bg-softPurple px-6 py-3 text-sm font-medium ss:text-base md:text-lg ${index == 1 && "cursor-not-allowed opacity-50"}`}
+                className={`bg-accent flex items-center justify-center rounded-md px-6 py-3 text-sm font-medium text-white ss:text-base md:text-lg ${index == 1 && "cursor-not-allowed opacity-50"}`}
               >
                 View Demo <RxArrowTopRight className="ml-2" />
               </a>

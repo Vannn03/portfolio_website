@@ -10,7 +10,7 @@ const ResponsiveNavLinks = ({
     <p
       className={`w-full cursor-pointer px-8 ${toggleNav ? "py-5" : "py-0"} text-sm font-light transition-all xs:text-base ${
         activeLink === route
-          ? "bg-softPurple font-medium text-white"
+          ? "bg-accent text-text font-medium"
           : "hover:bg-secondary"
       }`}
       onClick={() => handleActiveLinkChange(route, ref)}
@@ -20,7 +20,7 @@ const ResponsiveNavLinks = ({
   );
   return (
     <nav
-      className={`${toggleNav ? "pointer-events-auto opacity-100 " : "pointer-events-none opacity-0"} fixed top-[92px] w-full flex-col bg-navbar text-white/75 transition-all xs:top-24 ss:hidden`}
+      className={`${toggleNav ? "pointer-events-auto opacity-100 " : "pointer-events-none opacity-0"} text-text/75 fixed top-[92px] w-full flex-col bg-navbar transition-all xs:top-24 ss:hidden`}
     >
       {navLink("about", aboutRef, "About")}
 

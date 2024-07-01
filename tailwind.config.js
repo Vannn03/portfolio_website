@@ -7,15 +7,16 @@ export default {
         bvp: ["Be Vietnam Pro", "sans-serif"],
       },
       colors: {
-        softBlack: "#34353A",
-        secondary: "#2B2E31",
-        softPurple: "#7B68E4",
-        linkedin: "#0077B5",
-        github: "#171515",
-        instagram: "#D62976",
-        navbar: "#27272A",
-        footer: "#222527",
-        skill: "#414248",
+        primary: "rgba(var(--primary))",
+        secondary: "rgba(var(--secondary))",
+        text: "rgba(var(--text))",
+        accent: "rgba(var(--accent))",
+        linkedin: "rgba(var(--linkedin))",
+        github: "rgba(var(--github))",
+        instagram: "rgba(var(--instagram))",
+        navbar: "rgba(var(--navbar))",
+        footer: "rgba(var(--footer))",
+        skill: "rgba(var(--skill))",
       },
       dropShadow: {
         linkedin: "0 0 10px #0077B5",
@@ -23,9 +24,16 @@ export default {
         instagram: "0 0 10px #D62976",
       },
       boxShadow: {
-        "work-box-glow": "0 0 20px #7B68E4",
-        "nav-line-glow": "0 -4px 20px #7B68E4",
-        "experience-circle-glow": "0 0 10px #7B68E4",
+        "work-box-glow": "0 0 20px rgba(var(--accent))",
+        "nav-line-glow": "0 -4px 20px rgba(var(--accent))",
+        "experience-circle-glow": "0 0 10px rgba(var(--accent))",
+        "theme-toggler-glow": "0 0 4px rgba(var(--text), 0.25)",
+      },
+      backgroundImage: {
+        "hero-radial":
+          "radial-gradient(50% 50% at 50% 50%, rgba(var(--accent)) 0%, rgba(var(--primary)) 100%)",
+        "experience-fade":
+          "linear-gradient(180deg, rgba(var(--primary), 0) 0%, rgba(var(--primary)) 100%);",
       },
     },
     screens: {

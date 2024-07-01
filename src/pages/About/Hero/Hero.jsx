@@ -17,7 +17,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
           whileInView={{ opacity: 1, transform: "translateX(0)" }}
           viewport={{ once: true }}
           className={
-            "flex gap-1 text-lg font-semibold text-white/75 xs:text-xl sm:text-2xl  md:text-xl lg:text-2xl"
+            "text-text/75 flex gap-1 text-lg font-semibold xs:text-xl sm:text-2xl  md:text-xl lg:text-2xl"
           }
         >
           <p>Hi, I'm</p>
@@ -36,7 +36,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-4xl font-bold text-softPurple xs:text-5xl sm:text-7xl md:text-5xl lg:text-7xl">
+          <h1 className="text-accent text-4xl font-bold xs:text-5xl sm:text-7xl md:text-5xl lg:text-7xl">
             Enthusiastic
           </h1>
           <h1 className="mt-2 text-4xl font-bold xs:text-5xl sm:mt-3 sm:text-7xl md:text-5xl lg:text-7xl">
@@ -50,7 +50,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <p className="mt-6 font-light text-white/75 xs:mt-8 xs:text-lg sm:mt-10 sm:text-xl md:text-lg lg:text-xl">
+          <p className="text-text/75 mt-6 font-light xs:mt-8 xs:text-lg sm:mt-10 sm:text-xl md:text-lg lg:text-xl">
             I’m burning with passion for crafting immersive online experiences
             and bringing creative ideas to life through code.
           </p>
@@ -63,7 +63,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
           viewport={{ once: true }}
         >
           <button
-            className="mt-8 flex items-center rounded-md bg-softPurple px-6 py-3 text-base  font-medium transition-transform hover:translate-x-4 xs:mt-10 xs:text-lg sm:mt-12 sm:text-xl md:text-lg lg:text-xl"
+            className="bg-accent mt-8 flex items-center rounded-md px-6 py-3 text-base font-medium  text-white transition-transform hover:translate-x-4 xs:mt-10 xs:text-lg sm:mt-12 sm:text-xl md:text-lg lg:text-xl"
             onClick={() => handleScroll(selectedWorkRef)}
           >
             My Projects <FaLongArrowAltRight className="ml-2" />
@@ -72,7 +72,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
       </div>
 
       {/* Image */}
-      <div className="radial-bg absolute bottom-0 right-0 -z-10 hidden md:flex md:size-[620px] lg:size-[720px] xl:size-[870px]" />
+      <div className="bg-hero-radial absolute bottom-0 right-0 hidden rounded-full md:flex md:size-[620px] lg:size-[720px] xl:size-[870px]" />
       <img
         src="/hero-img.webp"
         alt="photo"
@@ -81,7 +81,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
 
       {/* Social Medias */}
       <div className="absolute bottom-12 flex items-center gap-6 lg:gap-8">
-        <hr className="w-24 border-white/50 ss:w-40 lg:w-52" />
+        <hr className="border-text/50 w-16 xs:w-24 ss:w-40 lg:w-52" />
         <a
           href="https://www.linkedin.com/in/jovan-hermawan"
           target="_blank"

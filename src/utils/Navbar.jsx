@@ -58,10 +58,10 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
           <h1 className="text-xl font-extrabold xs:text-2xl">Jovan.</h1>
 
           {/* Default: Navbar */}
-          <nav className="relative hidden gap-14 border-b border-white/35 text-white/75 ss:flex">
+          <nav className="text-text/75 border-text/35 relative hidden gap-14 border-b ss:flex">
             <p
               className={`cursor-pointer pb-4 text-lg ${
-                activeLink === "about" && "text-white"
+                activeLink === "about" && "text-text"
               }`}
               onClick={() => handleActiveLinkChange("about", aboutRef)}
             >
@@ -69,7 +69,7 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
             </p>
             <p
               className={`cursor-pointer pb-4 text-lg ${
-                activeLink === "portfolio" && "text-white"
+                activeLink === "portfolio" && "text-text"
               }`}
               onClick={() => handleActiveLinkChange("portfolio", portfolioRef)}
             >
@@ -77,7 +77,7 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
             </p>
             <p
               className={`cursor-pointer pb-4 text-lg ${
-                activeLink === "contact" && "text-white"
+                activeLink === "contact" && "text-text"
               }`}
               onClick={() => handleActiveLinkChange("contact", contactRef)}
             >
@@ -85,7 +85,7 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
             </p>
 
             <hr
-              className={`absolute top-10 z-50 hidden border-2 border-softPurple shadow-nav-line-glow transition-all ss:flex ${activeLink === "about" ? "left-0 w-14" : activeLink === "portfolio" ? "left-[110px] w-[76px]" : activeLink === "contact" && "left-[243px] w-[72px]"}`}
+              className={`border-accent absolute top-10 z-50 hidden border-2 shadow-nav-line-glow transition-all ss:flex ${activeLink === "about" ? "left-0 w-14" : activeLink === "portfolio" ? "left-[110px] w-[76px]" : activeLink === "contact" && "left-[243px] w-[72px]"}`}
             />
           </nav>
 
@@ -106,7 +106,7 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
       </div>
 
       <div
-        className={`z-40 h-dvh w-dvw bg-black/50 transition-colors ss:bg-transparent ${
+        className={`z-40 h-dvh w-dvw bg-black/75 transition-colors ss:bg-transparent ${
           toggleNav ? "flex" : "hidden"
         }`}
       />

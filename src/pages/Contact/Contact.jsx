@@ -6,7 +6,7 @@ const Contact = ({ motion }) => {
   const contactData = [
     {
       icon_element: (
-        <IoChatboxEllipses className="size-12 text-white/75 md:size-16" />
+        <IoChatboxEllipses className="text-text/75 size-12 md:size-16" />
       ),
       type: "CHAT",
       detail1: "Typical reply time: within minutes",
@@ -15,7 +15,7 @@ const Contact = ({ motion }) => {
       buttonName: "Chat Me",
     },
     {
-      icon_element: <MdEmail className="size-12 text-white/75 md:size-16" />,
+      icon_element: <MdEmail className="text-text/75 size-12 md:size-16" />,
       type: "EMAIL",
       detail1: "Typical reply time: within 1-3 days",
       detail2: "Everyday | 9am-5pm WIB",
@@ -24,7 +24,7 @@ const Contact = ({ motion }) => {
     },
     {
       icon_element: (
-        <FaMapLocationDot className="size-12 text-white/75 md:size-16" />
+        <FaMapLocationDot className="text-text/75 size-12 md:size-16" />
       ),
       type: "LOCATION",
       detail1: "Jakarta, Indonesia",
@@ -38,7 +38,7 @@ const Contact = ({ motion }) => {
     <div className="mx-auto flex max-w-[1000px] flex-col gap-6 px-8 ss:px-20">
       {contactData.map((data, index) => (
         <motion.div
-          className="flex flex-col items-center gap-6 rounded-lg bg-softBlack p-6 xs:p-10 sm:flex-row sm:justify-between sm:gap-8"
+          className="bg-primary flex flex-col items-center gap-6 rounded-lg p-6 xs:p-10 sm:flex-row sm:justify-between sm:gap-8"
           initial={{ opacity: 0, transform: "translateY(-28px)" }}
           whileInView={{ opacity: 1, transform: "translateY(0)" }}
           transition={{ delay: 0.2 }}
@@ -49,7 +49,7 @@ const Contact = ({ motion }) => {
             {data.icon_element}
             <div className="text-center sm:text-start">
               <h1 className="text-lg font-semibold xs:text-xl">{data.type}</h1>
-              <p className="mt-4 text-sm font-light text-white/50 xs:text-base sm:mt-1">
+              <p className="text-text/50 mt-4 text-sm font-light xs:text-base sm:mt-1">
                 {data.detail1} <br /> {data.detail2}
               </p>
             </div>
@@ -57,7 +57,7 @@ const Contact = ({ motion }) => {
           <a
             href={data.buttonHref}
             target="_blank"
-            className="rounded-md bg-softPurple px-6 py-3 text-sm font-medium xs:text-base md:text-lg"
+            className="bg-accent rounded-md px-6 py-3 text-sm font-medium text-white xs:text-base md:text-lg"
           >
             {data.buttonName}
           </a>
