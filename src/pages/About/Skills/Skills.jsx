@@ -25,12 +25,20 @@ const Skills = ({ motion }) => {
       name: "Tailwind CSS",
     },
     {
+      url_img: "skill-images/typescript.svg",
+      name: "TypeScript",
+    },
+    {
       url_img: "skill-images/next-js.svg",
       name: "Next.js",
     },
     {
       url_img: "skill-images/prisma.svg",
       name: "Prisma",
+    },
+    {
+      url_img: "skill-images/nextauth.svg",
+      name: "NextAuth.js",
     },
   ];
 
@@ -40,8 +48,12 @@ const Skills = ({ motion }) => {
       name: "Bootstrap",
     },
     {
-      url_img: "skill-images/typescript.svg",
-      name: "TypeScript",
+      url_img: "skill-images/daisy-ui.svg",
+      name: "Daisy UI",
+    },
+    {
+      url_img: "skill-images/material-ui.svg",
+      name: "Material UI",
     },
     {
       url_img: "skill-images/php.svg",
@@ -58,6 +70,14 @@ const Skills = ({ motion }) => {
     {
       url_img: "skill-images/mysql.svg",
       name: "MySQL",
+    },
+    {
+      url_img: "skill-images/sqlite.svg",
+      name: "SQLite",
+    },
+    {
+      url_img: "skill-images/turso.svg",
+      name: "Turso",
     },
     {
       url_img: "skill-images/git.svg",
@@ -87,7 +107,7 @@ const Skills = ({ motion }) => {
         {skillData.map((data, index) => (
           <motion.div
             key={index}
-            className="hover:bg-accent/75 flex flex-col items-center gap-8 rounded-3xl bg-skill py-8 transition-all"
+            className="flex flex-col items-center gap-8 rounded-3xl bg-skill py-8 transition-all hover:bg-accent/75"
             initial={{ opacity: 0, transform: "translateY(-28px)" }}
             whileInView={{ opacity: 1, transform: "translateY(0)" }}
             transition={{ delay: 0.2 }}
@@ -113,14 +133,14 @@ const Skills = ({ motion }) => {
       </div>
 
       <div className="mt-10">
-        <h1 className="text-text/75 mb-4 text-xl font-semibold xs:text-2xl">
+        <h1 className="mb-4 text-xl font-semibold text-text/75 xs:text-2xl">
           Others:
         </h1>
         <div className="grid grid-cols-2 gap-4 xs:grid-cols-3 xs:gap-6 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 ">
           {otherSkillData.map((data, index) => (
             <motion.div
               key={index}
-              className="hover:bg-accent/75 flex flex-col items-center gap-4 rounded-3xl bg-skill py-4 transition-all"
+              className="flex flex-col items-center gap-4 rounded-3xl bg-skill py-4 transition-all hover:bg-accent/75"
               initial={{ opacity: 0, transform: "translateY(-28px)" }}
               whileInView={{ opacity: 1, transform: "translateY(0)" }}
               transition={{ delay: 0.2 }}

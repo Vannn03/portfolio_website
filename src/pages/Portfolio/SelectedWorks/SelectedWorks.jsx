@@ -4,6 +4,25 @@ import { RxArrowTopRight } from "react-icons/rx";
 const SelectedWork2 = ({ motion }) => {
   const worksData = [
     {
+      url_image: "work-images/task.webp",
+      url_icons: [
+        "/skill-images/typescript.svg",
+        "/skill-images/next-js.svg",
+        "/skill-images/tailwind.svg",
+        "/skill-images/prisma.svg",
+        "/skill-images/daisy-ui.svg",
+        "/skill-images/material-ui.svg",
+        "/skill-images/sqlite.svg",
+        "/skill-images/turso.svg",
+        "/skill-images/nextauth.svg",
+      ],
+      title: "TaskEase Website",
+      description:
+        "A todo-list website designed to enhance productivity through intuitive task management features.",
+      url_repository: "https://github.com/Vannn03/task-ease",
+      url_demo: "https://taskease-todo.vercel.app",
+    },
+    {
       url_image: "work-images/movie.webp",
       url_icons: [
         "/skill-images/javascript.svg",
@@ -13,8 +32,9 @@ const SelectedWork2 = ({ motion }) => {
         "/skill-images/mysql.svg",
         "/skill-images/cloudinary.svg",
         "/skill-images/aiven.svg",
+        "/skill-images/nextauth.svg",
       ],
-      title: "Movie Peek Website",
+      title: "Movie Peek",
       description:
         "A personal movie database website for users to freely access trailers & details of various movies using API data from TMDB.",
       url_repository: "https://github.com/Vannn03/movie_peek",
@@ -54,7 +74,7 @@ const SelectedWork2 = ({ motion }) => {
       {worksData.map((data, index) => (
         <motion.div
           key={index}
-          className={`border-text/50 flex flex-col items-center border-2 ${index == 1 ? "md:flex-row-reverse" : "md:flex-row"} transition-shadow hover:shadow-work-box-glow`}
+          className={`flex flex-col items-center border-2 border-text/50 ${index % 2 != 0 ? "md:flex-row-reverse" : "md:flex-row"} transition-shadow hover:shadow-work-box-glow`}
           initial={{ opacity: 0, transform: "translateY(-28px)" }}
           whileInView={{ opacity: 1, transform: "translateY(0)" }}
           transition={{ delay: 0.2 }}
@@ -67,7 +87,7 @@ const SelectedWork2 = ({ motion }) => {
             loading="lazy"
           />
           <div className="flex flex-col gap-4 p-4 xs:p-6 sm:p-8 md:gap-6">
-            <div className="flex items-center gap-3 xs:gap-4">
+            <div className="flex flex-wrap items-center gap-3 xs:flex-nowrap xs:gap-4">
               {data.url_icons.map((icon, iconIndex) => (
                 <img
                   key={iconIndex}
@@ -82,7 +102,7 @@ const SelectedWork2 = ({ motion }) => {
             <h1 className="text-xl font-semibold xs:text-2xl md:text-3xl">
               {data.title}
             </h1>
-            <p className="text-text/75 text-sm font-light xs:text-base md:text-lg ">
+            <p className="text-sm font-light text-text/75 xs:text-base md:text-lg ">
               {data.description}
             </p>
             <div className="mt-2 flex flex-col gap-3 xs:flex-row xs:gap-4">
@@ -96,7 +116,7 @@ const SelectedWork2 = ({ motion }) => {
               <a
                 href={data.url_demo}
                 target="_blank"
-                className={`bg-accent flex items-center justify-center rounded-md px-6 py-3 text-sm font-medium text-white ss:text-base md:text-lg ${index == 1 && "cursor-not-allowed opacity-50"}`}
+                className={`flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-medium text-white ss:text-base md:text-lg ${index == 2 && "cursor-not-allowed opacity-50"}`}
               >
                 View Demo <RxArrowTopRight className="ml-2" />
               </a>
