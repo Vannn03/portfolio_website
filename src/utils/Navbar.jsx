@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ResponsiveNavMenu from "../components/ResponsiveNavMenu";
 import ResponsiveNavLinks from "../components/ResponsiveNavLinks";
+import PropTypes from "prop-types";
 
 const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
   const [activeLink, setActiveLink] = useState("about");
@@ -58,7 +59,7 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
           <h1 className="text-xl font-extrabold xs:text-2xl">Jovan.</h1>
 
           {/* Default: Navbar */}
-          <nav className="text-text/75 border-text/35 relative hidden gap-14 border-b ss:flex">
+          <nav className="relative hidden gap-14 border-b border-text/35 text-text/75 ss:flex">
             <p
               className={`cursor-pointer pb-4 text-lg ${
                 activeLink === "about" && "text-text"
@@ -85,7 +86,7 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
             </p>
 
             <hr
-              className={`border-accent absolute top-10 z-50 hidden border-2 shadow-nav-line-glow transition-all ss:flex ${activeLink === "about" ? "left-0 w-14" : activeLink === "portfolio" ? "left-[110px] w-[76px]" : activeLink === "contact" && "left-[243px] w-[72px]"}`}
+              className={`absolute top-10 z-50 hidden border-2 border-accent shadow-nav-line-glow transition-all ss:flex ${activeLink === "about" ? "left-0 w-14" : activeLink === "portfolio" ? "left-[110px] w-[76px]" : activeLink === "contact" && "left-[243px] w-[72px]"}`}
             />
           </nav>
 
@@ -115,3 +116,15 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
 };
 
 export default Navbar;
+
+Navbar.propTypes = {
+  aboutRef: PropTypes.shape({
+    current: PropTypes.instanceOf(Element),
+  }).isRequired,
+  portfolioRef: PropTypes.shape({
+    current: PropTypes.instanceOf(Element),
+  }).isRequired,
+  contactRef: PropTypes.shape({
+    current: PropTypes.instanceOf(Element),
+  }).isRequired,
+};

@@ -26,10 +26,10 @@ function App() {
       viewport={{ once: true }}
     >
       <p className="text-xl font-semibold xs:text-2xl ss:text-3xl">My</p>
-      <h1 className="text-accent mt-0 text-3xl font-bold xs:mt-1 xs:text-4xl ss:text-5xl">
+      <h1 className="mt-0 text-3xl font-bold text-accent xs:mt-1 xs:text-4xl ss:text-5xl">
         {title}
       </h1>
-      <div className="w border-accent mt-4 w-24 border-4 xs:mt-5 xs:w-28 ss:w-36" />
+      <div className="w mt-4 w-24 border-4 border-accent xs:mt-5 xs:w-28 ss:w-36" />
     </motion.div>
   );
 
@@ -46,22 +46,22 @@ function App() {
       </header>
 
       <div ref={aboutRef}>
-        <Hero selectedWorkRef={selectedWorkRef} motion={motion} />
+        <Hero selectedWorkRef={selectedWorkRef} />
       </div>
 
       <div className="pt-20" ref={portfolioRef}>
         {subTitle("Best Skills")}
-        <Skills motion={motion} />
+        <Skills />
       </div>
 
       <div className="mt-20 bg-secondary py-20" ref={selectedWorkRef}>
         {subTitle("Selected Works")}
-        <SelectedWorks motion={motion} />
+        <SelectedWorks />
       </div>
 
       <div className="pt-20">
         {subTitle("Experiences")}
-        <Experiences motion={motion} />
+        <Experiences />
       </div>
 
       <div className="mt-20 bg-secondary py-20" ref={contactRef}>
@@ -77,14 +77,14 @@ function App() {
             </h1>
           </motion.div>
           <motion.div
-            className="w border-accent mt-4 w-24 border-4 xs:mt-5 xs:w-28 ss:w-36"
+            className="w mt-4 w-24 border-4 border-accent xs:mt-5 xs:w-28 ss:w-36"
             initial={{ opacity: 0, transform: "translateX(40px)" }}
             whileInView={{ opacity: 1, transform: "translateX(0)" }}
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
           />
         </div>
-        <Contact motion={motion} />
+        <Contact />
       </div>
 
       {/* theme toggler */}

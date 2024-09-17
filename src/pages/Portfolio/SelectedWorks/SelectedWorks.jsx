@@ -1,7 +1,8 @@
 import { FaGithub } from "react-icons/fa6";
 import { RxArrowTopRight } from "react-icons/rx";
+import { motion } from "framer-motion";
 
-const SelectedWork2 = ({ motion }) => {
+const SelectedWorks = () => {
   const worksData = [
     {
       url_image: "work-images/task.webp",
@@ -128,4 +129,4 @@ const SelectedWork2 = ({ motion }) => {
   );
 };
 
-export default SelectedWork2;
+export default SelectedWorks;

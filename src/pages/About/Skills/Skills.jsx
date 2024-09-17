@@ -1,4 +1,6 @@
-const Skills = ({ motion }) => {
+import { motion } from "framer-motion";
+
+const Skills = () => {
   const skillData = [
     {
       url_img: "skill-images/figma.svg",
@@ -31,6 +33,10 @@ const Skills = ({ motion }) => {
     {
       url_img: "skill-images/next-js.svg",
       name: "Next.js",
+    },
+    {
+      url_img: "skill-images/nodejs.svg",
+      name: "Node.js",
     },
     {
       url_img: "skill-images/prisma.svg",

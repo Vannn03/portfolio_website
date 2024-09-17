@@ -1,6 +1,7 @@
 import { FaLinkedin } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
-const Experiences = ({ motion }) => {
+const Experiences = () => {
   const experienceData = [
     {
       url_image: "experience-images/GDSC.webp",
@@ -33,7 +34,7 @@ const Experiences = ({ motion }) => {
                 Center event website, utilizing TypeScript, Next.js, and Prisma.
               </li>
               <li>
-                Recognized with the 'Best Intern' award in the Website
+                Recognized with the &apos;Best Intern&apos; award in the Website
                 Development Division for outstanding contributions and
                 dedication to delivering high-quality web solutions.
               </li>
@@ -74,7 +75,7 @@ const Experiences = ({ motion }) => {
           key={index}
         >
           {index == experienceData.length - 1 ? (
-            <div className="bg-experience-fade absolute top-0 z-10 h-full w-full" />
+            <div className="absolute top-0 z-10 h-full w-full bg-experience-fade" />
           ) : null}
 
           <div className="flex items-center gap-4">
@@ -84,7 +85,7 @@ const Experiences = ({ motion }) => {
               className="w-16 rounded-sm"
               loading="lazy"
             />
-            <p className="text-text/75 text-sm font-medium tracking-wider xs:text-base">
+            <p className="text-sm font-medium tracking-wider text-text/75 xs:text-base">
               {data.company_name}
             </p>
           </div>
@@ -93,19 +94,19 @@ const Experiences = ({ motion }) => {
             {data.job_detail.map((detail, index2) => (
               <div className="flex gap-4 xs:gap-6" key={index2}>
                 <div className="flex flex-col items-center">
-                  <div className="bg-accent size-5 rounded-full shadow-experience-circle-glow sm:h-7 sm:w-6" />
-                  <div className="border-text/35 h-full border" />
+                  <div className="size-5 rounded-full bg-accent shadow-experience-circle-glow sm:h-7 sm:w-6" />
+                  <div className="h-full border border-text/35" />
                 </div>
                 <div className="flex -translate-y-1 flex-col">
                   <h1 className="text-lg font-semibold xs:text-xl sm:text-2xl">
                     {detail.position}
                   </h1>
-                  <p className="text-text/35 text-sm font-medium italic sm:text-base">
+                  <p className="text-sm font-medium italic text-text/35 sm:text-base">
                     {detail.date}
                   </p>
-                  <p className="text-text/75 mt-4 pb-8 text-sm font-light leading-normal sm:text-base">
+                  <div className="mt-4 pb-8 text-sm font-light leading-normal text-text/75 sm:text-base">
                     {detail.description}
-                  </p>
+                  </div>
                 </div>
               </div>
             ))}

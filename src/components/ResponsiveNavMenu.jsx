@@ -1,5 +1,6 @@
 import { LiaTimesSolid } from "react-icons/lia";
 import { TbMenuDeep } from "react-icons/tb";
+import PropTypes from "prop-types";
 
 const ResponsiveNavMenu = ({ toggleNav, setToggleNav }) => {
   return (
@@ -26,3 +27,8 @@ const ResponsiveNavMenu = ({ toggleNav, setToggleNav }) => {
 };
 
 export default ResponsiveNavMenu;
+
+ResponsiveNavMenu.propTypes = {
+  toggleNav: PropTypes.bool.isRequired,
+  setToggleNav: PropTypes.func.isRequired,
+};
