@@ -2,10 +2,19 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import { TypeAnimation } from "react-type-animation";
+import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
-const Hero = ({ selectedWorkRef, motion }) => {
+const Hero = ({ selectedWorkRef }) => {
   const handleScroll = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/CV ATS - Jovan Hermawan.pdf";
+    link.download = "CV ATS - Jovan Hermawan.pdf";
+    link.click();
   };
 
   return (
@@ -17,10 +26,10 @@ const Hero = ({ selectedWorkRef, motion }) => {
           whileInView={{ opacity: 1, transform: "translateX(0)" }}
           viewport={{ once: true }}
           className={
-            "text-text/75 flex gap-1 text-lg font-semibold xs:text-xl sm:text-2xl  md:text-xl lg:text-2xl"
+            "flex gap-1 text-lg font-semibold text-text/75 xs:text-xl sm:text-2xl  md:text-xl lg:text-2xl"
           }
         >
-          <p>Hi, I'm</p>
+          <p>Hi, I&apos;m</p>
           <TypeAnimation
             sequence={["Jovan Hermawan", 3000, "a Binusian 25", 3000]}
             wrapper="span"
@@ -36,7 +45,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-accent text-4xl font-bold xs:text-5xl sm:text-7xl md:text-5xl lg:text-7xl">
+          <h1 className="text-4xl font-bold text-accent xs:text-5xl sm:text-7xl md:text-5xl lg:text-7xl">
             Enthusiastic
           </h1>
           <h1 className="mt-2 text-4xl font-bold xs:text-5xl sm:mt-3 sm:text-7xl md:text-5xl lg:text-7xl">
@@ -50,7 +59,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <p className="text-text/75 mt-6 font-light xs:mt-8 xs:text-lg sm:mt-10 sm:text-xl md:text-lg lg:text-xl">
+          <p className="mt-6 font-light text-text/75 xs:mt-8 xs:text-lg sm:mt-10 sm:text-xl md:text-lg lg:text-xl">
             I’m burning with passion for crafting immersive online experiences
             and bringing creative ideas to life through code.
           </p>
@@ -61,9 +70,18 @@ const Hero = ({ selectedWorkRef, motion }) => {
           whileInView={{ opacity: 1, transform: "translateX(0)" }}
           transition={{ delay: 0.3 }}
           viewport={{ once: true }}
+          className={
+            "mt-8 flex items-center gap-4 text-sm xs:mt-10 xs:text-lg sm:mt-12 sm:text-xl md:text-lg"
+          }
         >
           <button
-            className="bg-accent mt-8 flex items-center rounded-md px-6 py-3 text-base font-medium  text-white transition-transform hover:translate-x-4 xs:mt-10 xs:text-lg sm:mt-12 sm:text-xl md:text-lg lg:text-xl"
+            onClick={handleDownload}
+            className="flex items-center rounded-md border-2 border-accent px-6 py-3 font-medium text-accent transition-colors hover:bg-accent hover:text-white"
+          >
+            Download CV
+          </button>
+          <button
+            className="flex items-center rounded-md bg-accent px-6 py-3 font-medium  text-white transition-transform hover:translate-x-2"
             onClick={() => handleScroll(selectedWorkRef)}
           >
             My Projects <FaLongArrowAltRight className="ml-2" />
@@ -72,7 +90,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
       </div>
 
       {/* Image */}
-      <div className="bg-hero-radial absolute bottom-0 right-0 hidden rounded-full md:flex md:size-[620px] lg:size-[720px] xl:size-[870px]" />
+      <div className="absolute bottom-0 right-0 hidden rounded-full bg-hero-radial md:flex md:size-[620px] lg:size-[720px] xl:size-[870px]" />
       <img
         src="/hero-img.webp"
         alt="photo"
@@ -81,7 +99,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
 
       {/* Social Medias */}
       <div className="absolute bottom-12 flex items-center gap-6 lg:gap-8">
-        <hr className="border-text/50 w-16 xs:w-24 ss:w-40 lg:w-52" />
+        <hr className="w-16 border-text/50 xs:w-24 ss:w-40 lg:w-52" />
         <a
           href="https://www.linkedin.com/in/jovan-hermawan"
           target="_blank"
@@ -105,3 +123,7 @@ const Hero = ({ selectedWorkRef, motion }) => {
 };
 
 export default Hero;
+
+Hero.propTypes = {
+  selectedWorkRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+};
