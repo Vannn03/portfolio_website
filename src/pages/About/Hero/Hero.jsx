@@ -4,6 +4,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { TypeAnimation } from "react-type-animation";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
+import { MdDownload } from "react-icons/md";
 
 const Hero = ({ selectedWorkRef }) => {
   const handleScroll = (ref) => {
@@ -78,10 +79,10 @@ const Hero = ({ selectedWorkRef }) => {
             onClick={handleDownload}
             className="flex items-center rounded-md border-2 border-accent px-6 py-3 font-medium text-accent transition-colors hover:bg-accent hover:text-white"
           >
-            Download CV
+            Download CV <MdDownload className="ml-2" />
           </button>
           <button
-            className="flex items-center rounded-md bg-accent px-6 py-3 font-medium  text-white transition-transform hover:translate-x-2"
+            className="flex items-center rounded-md border-2 border-accent bg-accent px-6 py-3 font-medium  text-white transition-transform hover:translate-x-2"
             onClick={() => handleScroll(selectedWorkRef)}
           >
             My Projects <FaLongArrowAltRight className="ml-2" />
