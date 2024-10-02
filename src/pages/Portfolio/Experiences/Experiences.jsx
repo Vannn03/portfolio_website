@@ -4,6 +4,18 @@ import { motion } from "framer-motion";
 const Experiences = () => {
   const experienceData = [
     {
+      url_image: "experience-images/binus.webp",
+      company_name: "Bina Nusantara University",
+      job_detail: [
+        {
+          position: "Graduation Committee",
+          date: "Jul 2024",
+          description:
+            "Contributed to the execution of the 69th graduation ceremony for 2000+ graduates.",
+        },
+      ],
+    },
+    {
       url_image: "experience-images/GDSC.webp",
       company_name: "Google Developer Student Club",
       job_detail: [
@@ -11,7 +23,7 @@ const Experiences = () => {
           position: "Web Development Course Member",
           date: "Oct 2023 - now",
           description:
-            "Received a web development roadmap with four main areas: introduction (covering HTML, CSS, and JavaScript), front-end (React.js), database (PostgreSQL), and back-end (Express.js), each with specific tasks.",
+            "Completed a full web development roadmap across four key areas, accomplishing 15+ tasks.",
         },
       ],
     },
@@ -21,22 +33,21 @@ const Experiences = () => {
       job_detail: [
         {
           position: "Web Developer Intern",
-          date: "Mar - Jun 2024",
+          date: "Mar 2024 - Jun 2024",
           description: (
             <ul className="list-disc pl-4">
               <li>
-                Collaborated within a dynamic team of three using GitHub and Git
-                to manage version control and streamline development processes.
+                Collaborated within a team of 3 using GitHub, achieving a 30%
+                reduction in development time by streamlining workflow processes
+                with Git.
               </li>
               <li>
-                Played a key role in designing and developing two projects: the
-                Exalter Students company profile website and the Inventify
-                Center event website, utilizing TypeScript, Next.js, and Prisma.
+                Led the design of the Exalter Students company profile website,
+                contributing to 75% of the overall visual and functional layout.
               </li>
               <li>
-                Recognized with the &apos;Best Intern&apos; award in the Website
-                Development Division for outstanding contributions and
-                dedication to delivering high-quality web solutions.
+                Developed and implemented 4 key pages for the Inventify Center
+                event website utilizing TypeScript, Next.js, and Tailwind CSS.
               </li>
             </ul>
           ),
@@ -49,7 +60,7 @@ const Experiences = () => {
       job_detail: [
         {
           position: "Bootcamp Back-End Member",
-          date: "Aug - Sep 2023",
+          date: "Aug 2023 - Sep 2023",
           description:
             "BNCC Bootcamp is an event that focuses on developing digital skills in the IT field with a total of 8 meeting sessions and 1 final project.",
         },
