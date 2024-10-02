@@ -1,14 +1,19 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./App.css";
 import Hero from "./pages/About/Hero/Hero";
-import Skills from "./pages/About/Skills/Skills";
-import Contact from "./pages/Contact/Contact";
-import Experiences from "./pages/Portfolio/Experiences/Experiences";
-import SelectedWorks from "./pages/Portfolio/SelectedWorks/SelectedWorks";
-import Footer from "./utils/Footer";
 import Navbar from "./utils/Navbar";
 import ThemeToggler from "./components/ThemeToggler";
+
+const Skills = React.lazy(() => import("./pages/About/Skills/Skills"));
+const Contact = React.lazy(() => import("./pages/Contact/Contact"));
+const Experiences = React.lazy(
+  () => import("./pages/Portfolio/Experiences/Experiences"),
+);
+const SelectedWorks = React.lazy(
+  () => import("./pages/Portfolio/SelectedWorks/SelectedWorks"),
+);
+const Footer = React.lazy(() => import("./utils/Footer"));
 
 function App() {
   const [theme, setTheme] = useState(false); // false = dark
