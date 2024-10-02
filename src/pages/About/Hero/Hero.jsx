@@ -91,11 +91,10 @@ const Hero = ({ selectedWorkRef }) => {
       </div>
 
       {/* Image */}
-      <div className="absolute bottom-0 right-0 hidden rounded-full bg-hero-radial md:flex md:size-[620px] lg:size-[720px] xl:size-[870px]" />
       <img
         src="/hero-img.webp"
         alt="photo"
-        className="absolute bottom-0 right-0 hidden md:flex md:size-[600px] lg:size-[700px] xl:size-[850px]"
+        className="absolute bottom-0 right-0 hidden w-[50%] md:flex"
       />
 
       {/* Social Medias */}
