@@ -5,19 +5,19 @@ import { TypeAnimation } from "react-type-animation";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { MdDownload } from "react-icons/md";
+import { useCallback } from "react";
 
 const Hero = ({ selectedWorkRef }) => {
-  const handleScroll = (ref) => {
+  const handleScroll = useCallback((ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
-  };
+  }, []);
 
-  const handleDownload = () => {
+  const handleDownload = useCallback(() => {
     const link = document.createElement("a");
     link.href = "/CV ATS - Jovan Hermawan.pdf";
     link.download = "CV ATS - Jovan Hermawan.pdf";
     link.click();
-  };
-
+  }, []);
   return (
     <div className="relative flex h-dvh items-center px-8 ss:px-20">
       {/* Description */}
@@ -103,16 +103,23 @@ const Hero = ({ selectedWorkRef }) => {
         <a
           href="https://www.linkedin.com/in/jovan-hermawan"
           target="_blank"
+          rel="noopener noreferrer"
           title="linkedin"
         >
           <FaLinkedin className="size-6 transition-colors hover:text-linkedin hover:drop-shadow-linkedin ss:size-7" />
         </a>
-        <a href="https://github.com/Vannn03" target="_blank" title="github">
+        <a
+          href="https://github.com/Vannn03"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="github"
+        >
           <FaGithub className="size-6 transition-colors hover:text-github hover:drop-shadow-github ss:size-7" />
         </a>
         <a
           href="https://instagram.com/jovanhermawan"
           target="_blank"
+          rel="noopener noreferrer"
           title="instagram"
         >
           <RiInstagramFill className="size-6 transition-colors hover:text-instagram hover:drop-shadow-instagram ss:size-7" />
