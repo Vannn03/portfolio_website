@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import ResponsiveNavMenu from "../components/ResponsiveNavMenu";
 import ResponsiveNavLinks from "../components/ResponsiveNavLinks";
 import PropTypes from "prop-types";
@@ -42,10 +42,11 @@ const Navbar = ({ aboutRef, portfolioRef, contactRef }) => {
   }, [aboutRef, portfolioRef, contactRef]);
 
   // Detect scroll position and scroll accordingly
-  const handleActiveLinkChange = (route, ref) => {
+  // Memoize the function to prevent re-renders in child components
+  const handleActiveLinkChange = useCallback((route, ref) => {
     setActiveLink(route);
     ref.current.scrollIntoView({ behavior: "smooth" });
-  };
+  }, []);
 
   return (
     <>
