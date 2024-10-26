@@ -1,5 +1,4 @@
-import { FaGithub } from "react-icons/fa6";
-import { RxArrowTopRight } from "react-icons/rx";
+import { FaGithub, FaLaptopCode } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 const worksData = [
@@ -16,7 +15,7 @@ const worksData = [
       "/skill-images/turso.svg",
       "/skill-images/nextauth.svg",
     ],
-    title: "TaskEase Website",
+    title: "TaskEase",
     description:
       "A todo-list website designed to enhance productivity through intuitive task management features.",
     url_repository: "https://github.com/Vannn03/task-ease",
@@ -48,7 +47,7 @@ const worksData = [
       "/skill-images/php.svg",
       "/skill-images/laravel.svg",
     ],
-    title: "Goods Data Collection Website",
+    title: "Goods Data Collection",
     description:
       "Built a goods data collection website for selling goods that require CRUD & validation, authentication for both user & admin roles, and relationships between certain models.",
     url_repository: "https://github.com/Vannn03/Goods-Data-Collection-Website",
@@ -60,7 +59,7 @@ const worksData = [
       "/skill-images/bootstrap.svg",
       "/skill-images/javascript.svg",
     ],
-    title: "PuddingFest Event Website",
+    title: "PuddingFest Event",
     description:
       "Built a responsive online event website called 'PuddingFest' for event participants who wish to register and see various event series.",
     url_repository: "https://github.com/Vannn03/PuddingFest-Event-Website",
@@ -68,12 +67,12 @@ const worksData = [
   },
 ];
 
-const SelectedWorks = () => (
+const CodingWorks = () => (
   <div className="flex flex-col gap-6 px-8 ss:px-20 sm:gap-12">
     {worksData.map((data, index) => (
       <motion.div
         key={index}
-        className={`flex flex-col items-center border-2 border-text/50 ${index % 2 != 0 ? "md:flex-row-reverse" : "md:flex-row"} transition-shadow hover:shadow-work-box-glow`}
+        className={`flex flex-col border-2 border-text/50 md:items-center ${index % 2 != 0 ? "md:flex-row-reverse" : "md:flex-row"} transition-shadow hover:shadow-work-box-glow`}
         initial={{ opacity: 0, transform: "translateY(-28px)" }}
         whileInView={{ opacity: 1, transform: "translateY(0)" }}
         transition={{ delay: 0.2 }}
@@ -117,7 +116,7 @@ const SelectedWorks = () => (
               target="_blank"
               className={`flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-medium text-white ss:text-base md:text-lg ${index == 2 && "cursor-not-allowed opacity-50"}`}
             >
-              View Demo <RxArrowTopRight className="ml-2" />
+              <FaLaptopCode className="mr-2" /> View Demo
             </a>
           </div>
         </div>
@@ -126,4 +125,4 @@ const SelectedWorks = () => (
   </div>
 );
 
-export default SelectedWorks;
+export default CodingWorks;

@@ -7,10 +7,8 @@ import ThemeToggler from "./components/ThemeToggler";
 
 const Skills = React.lazy(() => import("./pages/About/Skills"));
 const Contact = React.lazy(() => import("./pages/Contact/Contact"));
+const MenuToggler = React.lazy(() => import("./components/MenuToggler"));
 const Experiences = React.lazy(() => import("./pages/Portfolio/Experiences"));
-const SelectedWorks = React.lazy(
-  () => import("./pages/Portfolio/SelectedWorks"),
-);
 const Footer = React.lazy(() => import("./utils/Footer"));
 
 const subTitle = (title) => (
@@ -59,7 +57,7 @@ function App() {
 
       <div className="mt-20 bg-secondary py-20" ref={selectedWorkRef}>
         {subTitle("Selected Works")}
-        <SelectedWorks />
+        <MenuToggler />
       </div>
 
       <div className="pt-20">
