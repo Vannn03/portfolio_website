@@ -1,18 +1,14 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./App.css";
-import Hero from "./pages/About/Hero/Hero";
+import Hero from "./pages/About/Hero";
 import Navbar from "./utils/Navbar";
 import ThemeToggler from "./components/ThemeToggler";
 
-const Skills = React.lazy(() => import("./pages/About/Skills/Skills"));
+const Skills = React.lazy(() => import("./pages/About/Skills"));
 const Contact = React.lazy(() => import("./pages/Contact/Contact"));
-const Experiences = React.lazy(
-  () => import("./pages/Portfolio/Experiences/Experiences"),
-);
-const SelectedWorks = React.lazy(
-  () => import("./pages/Portfolio/SelectedWorks/SelectedWorks"),
-);
+const MenuToggler = React.lazy(() => import("./components/MenuToggler"));
+const Experiences = React.lazy(() => import("./pages/Portfolio/Experiences"));
 const Footer = React.lazy(() => import("./utils/Footer"));
 
 const subTitle = (title) => (
@@ -61,7 +57,7 @@ function App() {
 
       <div className="mt-20 bg-secondary py-20" ref={selectedWorkRef}>
         {subTitle("Selected Works")}
-        <SelectedWorks />
+        <MenuToggler />
       </div>
 
       <div className="pt-20">
