@@ -81,6 +81,10 @@ const otherSkillData = [
     name: "SQLite",
   },
   {
+    url_img: "skill-images/visual-paradigm.svg",
+    name: "Visual Paradigm",
+  },
+  {
     url_img: "skill-images/turso.svg",
     name: "Turso",
   },
