@@ -3,6 +3,15 @@ import { motion } from "framer-motion";
 
 const worksData = [
   {
+    url_image: "work-images/gms.webp",
+    url_icons: ["/skill-images/figma.svg", "/skill-images/visual-paradigm.svg"],
+    title: "Body Ken Gym Management System",
+    description:
+      "An integrated application designed to help gym managers automate various daily administrative and operational functions.",
+    url_design:
+      "https://www.figma.com/proto/Q9sojAekG34IHc3fO3AiK6/ABAD_Body-Ken-Gym?node-id=0-1&t=feiD1hpwKXx9lH0h-1",
+  },
+  {
     url_image: "work-images/petcare.webp",
     url_icons: ["/skill-images/figma.svg"],
     title: "PetCare",

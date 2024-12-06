@@ -8,9 +8,9 @@ const experienceData = [
     job_detail: [
       {
         position: "Graduation Committee",
-        date: "Jul 2024",
+        date: "Jul 2024 - Nov 2024",
         description:
-          "Contributed to the execution of the 69th graduation ceremony for 2000+ graduates.",
+          "Contributed to the execution of the 69th and 70th graduation ceremony for 4000+ graduates.",
       },
     ],
   },
