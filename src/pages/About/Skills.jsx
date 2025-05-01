@@ -2,110 +2,138 @@ import { motion } from "framer-motion";
 
 const skillData = [
   {
-    url_img: "skill-images/figma.svg",
+    url_img: "src/assets/skill-images/figma.svg",
     name: "Figma",
   },
   {
-    url_img: "skill-images/html.svg",
+    url_img: "src/assets/skill-images/html.svg",
     name: "HTML",
   },
   {
-    url_img: "skill-images/css.svg",
+    url_img: "src/assets/skill-images/css.svg",
     name: "CSS",
   },
   {
-    url_img: "skill-images/javascript.svg",
+    url_img: "src/assets/skill-images/javascript.svg",
     name: "JavaScript",
   },
   {
-    url_img: "skill-images/react.svg",
+    url_img: "src/assets/skill-images/react.svg",
     name: "React",
   },
   {
-    url_img: "skill-images/tailwind.svg",
+    url_img: "src/assets/skill-images/tailwind.svg",
     name: "Tailwind CSS",
   },
   {
-    url_img: "skill-images/typescript.svg",
+    url_img: "src/assets/skill-images/typescript.svg",
     name: "TypeScript",
-  },
-  {
-    url_img: "skill-images/next-js.svg",
-    name: "Next.js",
-  },
-  {
-    url_img: "skill-images/nodejs.svg",
-    name: "Node.js",
-  },
-  {
-    url_img: "skill-images/prisma.svg",
-    name: "Prisma",
-  },
-  {
-    url_img: "skill-images/nextauth.svg",
-    name: "NextAuth.js",
   },
 ];
 
 const otherSkillData = [
   {
-    url_img: "skill-images/bootstrap.svg",
+    url_img: "src/assets/skill-images/next-js.svg",
+    name: "Next.js",
+  },
+  {
+    url_img: "src/assets/skill-images/nodejs.svg",
+    name: "Node.js",
+  },
+  {
+    url_img: "src/assets/skill-images/prisma.svg",
+    name: "Prisma",
+  },
+  {
+    url_img: "src/assets/skill-images/nextauth.svg",
+    name: "NextAuth.js",
+  },
+  {
+    url_img: "src/assets/skill-images/angular.svg",
+    name: "Angular",
+  },
+  {
+    url_img: "src/assets/skill-images/jira.svg",
+    name: "Jira",
+  },
+  {
+    url_img: "src/assets/skill-images/bitbucket.svg",
+    name: "Bitbucket",
+  },
+  {
+    url_img: "src/assets/skill-images/cucumber.svg",
+    name: "Cucumber",
+  },
+  {
+    url_img: "src/assets/skill-images/playwright.svg",
+    name: "Playwright",
+  },
+  {
+    url_img: "src/assets/skill-images/swagger.svg",
+    name: "Swagger",
+  },
+  {
+    url_img: "src/assets/skill-images/postman.svg",
+    name: "Postman",
+  },
+  {
+    url_img: "src/assets/skill-images/bootstrap.svg",
     name: "Bootstrap",
   },
   {
-    url_img: "skill-images/daisy-ui.svg",
+    url_img: "src/assets/skill-images/daisy-ui.svg",
     name: "Daisy UI",
   },
   {
-    url_img: "skill-images/material-ui.svg",
+    url_img: "src/assets/skill-images/material-ui.svg",
     name: "Material UI",
   },
   {
-    url_img: "skill-images/php.svg",
+    url_img: "src/assets/skill-images/php.svg",
     name: "PHP",
   },
   {
-    url_img: "skill-images/laravel.svg",
+    url_img: "src/assets/skill-images/laravel.svg",
     name: "Laravel",
   },
   {
-    url_img: "skill-images/java.svg",
+    url_img: "src/assets/skill-images/java.svg",
     name: "Java",
   },
   {
-    url_img: "skill-images/mysql.svg",
+    url_img: "src/assets/skill-images/mysql.svg",
     name: "MySQL",
   },
   {
-    url_img: "skill-images/sqlite.svg",
+    url_img: "src/assets/skill-images/sqlite.svg",
     name: "SQLite",
   },
   {
-    url_img: "skill-images/visual-paradigm.svg",
+    url_img: "src/assets/skill-images/visual-paradigm.svg",
     name: "Visual Paradigm",
   },
   {
-    url_img: "skill-images/turso.svg",
+    url_img: "src/assets/skill-images/turso.svg",
     name: "Turso",
   },
   {
-    url_img: "skill-images/git.svg",
+    url_img: "src/assets/skill-images/git.svg",
     name: "Git",
   },
   {
-    url_img: "skill-images/vs-code.svg",
+    url_img: "src/assets/skill-images/vs-code.svg",
     name: "VS Code",
   },
   {
-    url_img: "skill-images/phpmyadmin.svg",
+    url_img: "src/assets/skill-images/phpmyadmin.svg",
     name: "PhpMyAdmin",
   },
   {
-    url_img: "skill-images/cloudinary.svg",
+    url_img: "src/assets/skill-images/cloudinary.svg",
     name: "Cloudinary",
   },
   {
-    url_img: "skill-images/aiven.svg",
+    url_img: "src/assets/skill-images/aiven.svg",
     name: "Aiven",
   },
 ];

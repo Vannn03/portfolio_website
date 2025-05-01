@@ -3,17 +3,17 @@ import { motion } from "framer-motion";
 
 const worksData = [
   {
-    url_image: "work-images/task.webp",
+    url_image: "src/assets/work-images/task.webp",
     url_icons: [
-      "/skill-images/typescript.svg",
-      "/skill-images/next-js.svg",
-      "/skill-images/tailwind.svg",
-      "/skill-images/prisma.svg",
-      "/skill-images/daisy-ui.svg",
-      "/skill-images/material-ui.svg",
-      "/skill-images/sqlite.svg",
-      "/skill-images/turso.svg",
-      "/skill-images/nextauth.svg",
+      "src/assets/skill-images/typescript.svg",
+      "src/assets/skill-images/next-js.svg",
+      "src/assets/skill-images/tailwind.svg",
+      "src/assets/skill-images/prisma.svg",
+      "src/assets/skill-images/daisy-ui.svg",
+      "src/assets/skill-images/material-ui.svg",
+      "src/assets/skill-images/sqlite.svg",
+      "src/assets/skill-images/turso.svg",
+      "src/assets/skill-images/nextauth.svg",
     ],
     title: "TaskEase",
     description:
@@ -22,16 +22,16 @@ const worksData = [
     url_demo: "https://taskease-todo.vercel.app",
   },
   {
-    url_image: "work-images/movie.webp",
+    url_image: "src/assets/work-images/movie.webp",
     url_icons: [
-      "/skill-images/javascript.svg",
-      "/skill-images/next-js.svg",
-      "/skill-images/tailwind.svg",
-      "/skill-images/prisma.svg",
-      "/skill-images/mysql.svg",
-      "/skill-images/cloudinary.svg",
-      "/skill-images/aiven.svg",
-      "/skill-images/nextauth.svg",
+      "src/assets/skill-images/javascript.svg",
+      "src/assets/skill-images/next-js.svg",
+      "src/assets/skill-images/tailwind.svg",
+      "src/assets/skill-images/prisma.svg",
+      "src/assets/skill-images/mysql.svg",
+      "src/assets/skill-images/cloudinary.svg",
+      "src/assets/skill-images/aiven.svg",
+      "src/assets/skill-images/nextauth.svg",
     ],
     title: "Movie Peek",
     description:
@@ -40,12 +40,12 @@ const worksData = [
     url_demo: "https://movie-peek.vercel.app",
   },
   {
-    url_image: "work-images/storage.webp",
+    url_image: "src/assets/work-images/storage.webp",
     url_icons: [
-      "/skill-images/bootstrap.svg",
-      "/skill-images/javascript.svg",
-      "/skill-images/php.svg",
-      "/skill-images/laravel.svg",
+      "src/assets/skill-images/bootstrap.svg",
+      "src/assets/skill-images/javascript.svg",
+      "src/assets/skill-images/php.svg",
+      "src/assets/skill-images/laravel.svg",
     ],
     title: "Goods Data Collection",
     description:
@@ -53,11 +53,11 @@ const worksData = [
     url_repository: "https://github.com/Vannn03/Goods-Data-Collection-Website",
   },
   {
-    url_image: "work-images/event.webp",
+    url_image: "src/assets/work-images/event.webp",
     url_icons: [
-      "/skill-images/html.svg",
-      "/skill-images/bootstrap.svg",
-      "/skill-images/javascript.svg",
+      "src/assets/skill-images/html.svg",
+      "src/assets/skill-images/bootstrap.svg",
+      "src/assets/skill-images/javascript.svg",
     ],
     title: "PuddingFest Event",
     description:
@@ -93,7 +93,7 @@ const CodingWorks = () => (
                 alt="..."
                 loading="lazy"
                 className="aspect-square w-6 md:w-8"
-                title={icon.replace("/skill-images/", "").replace(".svg", "")}
+                title={icon.replace("src/assets/skill-images/", "").replace(".svg", "")}
               />
             ))}
           </div>
