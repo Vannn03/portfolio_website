@@ -1,9 +1,13 @@
 import { FaLinkedin } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import binusImg from "../../assets/experience-images/binus.webp";
+import gdscImg from "../../assets/experience-images/GDSC.webp";
+import exalterImg from "../../assets/experience-images/exalter.webp";
+import bnccImg from "../../assets/experience-images/bncc.webp";
 
 const experienceData = [
   {
-    url_image: "src/assets/experience-images/binus.webp",
+    url_image: binusImg,
     company_name: "Bina Nusantara University",
     job_detail: [
       {
@@ -15,7 +19,7 @@ const experienceData = [
     ],
   },
   {
-    url_image: "src/assets/experience-images/GDSC.webp",
+    url_image: gdscImg,
     company_name: "Google Developer Student Club",
     job_detail: [
       {
@@ -27,7 +31,7 @@ const experienceData = [
     ],
   },
   {
-    url_image: "src/assets/experience-images/exalter.webp",
+    url_image: exalterImg,
     company_name: "Exalter Students",
     job_detail: [
       {
@@ -54,7 +58,7 @@ const experienceData = [
     ],
   },
   {
-    url_image: "src/assets/experience-images/bncc.webp",
+    url_image: bnccImg,
     company_name: "Bina Nusantara Computer Club",
     job_detail: [
       {

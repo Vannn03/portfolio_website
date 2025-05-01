@@ -1,141 +1,75 @@
 import { motion } from "framer-motion";
+import figmaImg from "../../assets/skill-images/figma.svg";
+import htmlImg from "../../assets/skill-images/html.svg";
+import cssImg from "../../assets/skill-images/css.svg";
+import javascriptImg from "../../assets/skill-images/javascript.svg";
+import reactImg from "../../assets/skill-images/react.svg";
+import tailwindImg from "../../assets/skill-images/tailwind.svg";
+import typescriptImg from "../../assets/skill-images/typescript.svg";
+import nextJsImg from "../../assets/skill-images/next-js.svg";
+import nodeJsImg from "../../assets/skill-images/nodejs.svg";
+import prismaImg from "../../assets/skill-images/prisma.svg";
+import nextAuthImg from "../../assets/skill-images/nextauth.svg";
+import angularImg from "../../assets/skill-images/angular.svg";
+import jiraImg from "../../assets/skill-images/jira.svg";
+import bitbucketImg from "../../assets/skill-images/bitbucket.svg";
+import cucumberImg from "../../assets/skill-images/cucumber.svg";
+import playwrightImg from "../../assets/skill-images/playwright.svg";
+import swaggerImg from "../../assets/skill-images/swagger.svg";
+import postmanImg from "../../assets/skill-images/postman.svg";
+import bootstrapImg from "../../assets/skill-images/bootstrap.svg";
+import daisyUiImg from "../../assets/skill-images/daisy-ui.svg";
+import materialUiImg from "../../assets/skill-images/material-ui.svg";
+import phpImg from "../../assets/skill-images/php.svg";
+import laravelImg from "../../assets/skill-images/laravel.svg";
+import javaImg from "../../assets/skill-images/java.svg";
+import mysqlImg from "../../assets/skill-images/mysql.svg";
+import sqliteImg from "../../assets/skill-images/sqlite.svg";
+import visualParadigmImg from "../../assets/skill-images/visual-paradigm.svg";
+import tursoImg from "../../assets/skill-images/turso.svg";
+import gitImg from "../../assets/skill-images/git.svg";
+import vsCodeImg from "../../assets/skill-images/vs-code.svg";
+import phpmyadminImg from "../../assets/skill-images/phpmyadmin.svg";
+import cloudinaryImg from "../../assets/skill-images/cloudinary.svg";
+import aivenImg from "../../assets/skill-images/aiven.svg";
 
 const skillData = [
-  {
-    url_img: "src/assets/skill-images/figma.svg",
-    name: "Figma",
-  },
-  {
-    url_img: "src/assets/skill-images/html.svg",
-    name: "HTML",
-  },
-  {
-    url_img: "src/assets/skill-images/css.svg",
-    name: "CSS",
-  },
-  {
-    url_img: "src/assets/skill-images/javascript.svg",
-    name: "JavaScript",
-  },
-  {
-    url_img: "src/assets/skill-images/react.svg",
-    name: "React",
-  },
-  {
-    url_img: "src/assets/skill-images/tailwind.svg",
-    name: "Tailwind CSS",
-  },
-  {
-    url_img: "src/assets/skill-images/typescript.svg",
-    name: "TypeScript",
-  },
+  { url_img: figmaImg, name: "Figma" },
+  { url_img: htmlImg, name: "HTML" },
+  { url_img: cssImg, name: "CSS" },
+  { url_img: javascriptImg, name: "JavaScript" },
+  { url_img: reactImg, name: "React" },
+  { url_img: tailwindImg, name: "Tailwind CSS" },
+  { url_img: typescriptImg, name: "TypeScript" },
 ];
 
 const otherSkillData = [
-  {
-    url_img: "src/assets/skill-images/next-js.svg",
-    name: "Next.js",
-  },
-  {
-    url_img: "src/assets/skill-images/nodejs.svg",
-    name: "Node.js",
-  },
-  {
-    url_img: "src/assets/skill-images/prisma.svg",
-    name: "Prisma",
-  },
-  {
-    url_img: "src/assets/skill-images/nextauth.svg",
-    name: "NextAuth.js",
-  },
-  {
-    url_img: "src/assets/skill-images/angular.svg",
-    name: "Angular",
-  },
-  {
-    url_img: "src/assets/skill-images/jira.svg",
-    name: "Jira",
-  },
-  {
-    url_img: "src/assets/skill-images/bitbucket.svg",
-    name: "Bitbucket",
-  },
-  {
-    url_img: "src/assets/skill-images/cucumber.svg",
-    name: "Cucumber",
-  },
-  {
-    url_img: "src/assets/skill-images/playwright.svg",
-    name: "Playwright",
-  },
-  {
-    url_img: "src/assets/skill-images/swagger.svg",
-    name: "Swagger",
-  },
-  {
-    url_img: "src/assets/skill-images/postman.svg",
-    name: "Postman",
-  },
-  {
-    url_img: "src/assets/skill-images/bootstrap.svg",
-    name: "Bootstrap",
-  },
-  {
-    url_img: "src/assets/skill-images/daisy-ui.svg",
-    name: "Daisy UI",
-  },
-  {
-    url_img: "src/assets/skill-images/material-ui.svg",
-    name: "Material UI",
-  },
-  {
-    url_img: "src/assets/skill-images/php.svg",
-    name: "PHP",
-  },
-  {
-    url_img: "src/assets/skill-images/laravel.svg",
-    name: "Laravel",
-  },
-  {
-    url_img: "src/assets/skill-images/java.svg",
-    name: "Java",
-  },
-  {
-    url_img: "src/assets/skill-images/mysql.svg",
-    name: "MySQL",
-  },
-  {
-    url_img: "src/assets/skill-images/sqlite.svg",
-    name: "SQLite",
-  },
-  {
-    url_img: "src/assets/skill-images/visual-paradigm.svg",
-    name: "Visual Paradigm",
-  },
-  {
-    url_img: "src/assets/skill-images/turso.svg",
-    name: "Turso",
-  },
-  {
-    url_img: "src/assets/skill-images/git.svg",
-    name: "Git",
-  },
-  {
-    url_img: "src/assets/skill-images/vs-code.svg",
-    name: "VS Code",
-  },
-  {
-    url_img: "src/assets/skill-images/phpmyadmin.svg",
-    name: "PhpMyAdmin",
-  },
-  {
-    url_img: "src/assets/skill-images/cloudinary.svg",
-    name: "Cloudinary",
-  },
-  {
-    url_img: "src/assets/skill-images/aiven.svg",
-    name: "Aiven",
-  },
+  { url_img: nextJsImg, name: "Next.js" },
+  { url_img: nodeJsImg, name: "Node.js" },
+  { url_img: prismaImg, name: "Prisma" },
+  { url_img: nextAuthImg, name: "NextAuth.js" },
+  { url_img: angularImg, name: "Angular" },
+  { url_img: jiraImg, name: "Jira" },
+  { url_img: bitbucketImg, name: "Bitbucket" },
+  { url_img: cucumberImg, name: "Cucumber" },
+  { url_img: playwrightImg, name: "Playwright" },
+  { url_img: swaggerImg, name: "Swagger" },
+  { url_img: postmanImg, name: "Postman" },
+  { url_img: bootstrapImg, name: "Bootstrap" },
+  { url_img: daisyUiImg, name: "Daisy UI" },
+  { url_img: materialUiImg, name: "Material UI" },
+  { url_img: phpImg, name: "PHP" },
+  { url_img: laravelImg, name: "Laravel" },
+  { url_img: javaImg, name: "Java" },
+  { url_img: mysqlImg, name: "MySQL" },
+  { url_img: sqliteImg, name: "SQLite" },
+  { url_img: visualParadigmImg, name: "Visual Paradigm" },
+  { url_img: tursoImg, name: "Turso" },
+  { url_img: gitImg, name: "Git" },
+  { url_img: vsCodeImg, name: "VS Code" },
+  { url_img: phpmyadminImg, name: "PhpMyAdmin" },
+  { url_img: cloudinaryImg, name: "Cloudinary" },
+  { url_img: aivenImg, name: "Aiven" },
 ];
 
 const Skills = () => (

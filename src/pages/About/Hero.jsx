@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { MdDownload } from "react-icons/md";
 import { useCallback } from "react";
+import heroImg from "../../assets/hero-img.webp"
 
 const Hero = ({ selectedWorkRef }) => {
   const handleScroll = useCallback((ref) => {
@@ -92,7 +93,7 @@ const Hero = ({ selectedWorkRef }) => {
 
       {/* Image */}
       <img
-        src="/hero-img.webp"
+        src={heroImg}
         alt="photo"
         className="absolute bottom-0 right-0 hidden w-[50%] md:flex"
       />

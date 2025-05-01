@@ -1,19 +1,43 @@
 import { FaGithub, FaLaptopCode } from "react-icons/fa6";
 import { motion } from "framer-motion";
+// Work images
+import taskImg from "../../../assets/work-images/task.webp";
+import movieImg from "../../../assets/work-images/movie.webp";
+import storageImg from "../../../assets/work-images/storage.webp";
+import eventImg from "../../../assets/work-images/event.webp";
+
+// Skill icons
+import typescriptImg from "../../../assets/skill-images/typescript.svg";
+import nextJsImg from "../../../assets/skill-images/next-js.svg";
+import tailwindImg from "../../../assets/skill-images/tailwind.svg";
+import prismaImg from "../../../assets/skill-images/prisma.svg";
+import daisyUiImg from "../../../assets/skill-images/daisy-ui.svg";
+import materialUiImg from "../../../assets/skill-images/material-ui.svg";
+import sqliteImg from "../../../assets/skill-images/sqlite.svg";
+import tursoImg from "../../../assets/skill-images/turso.svg";
+import nextAuthImg from "../../../assets/skill-images/nextauth.svg";
+import javascriptImg from "../../../assets/skill-images/javascript.svg";
+import mysqlImg from "../../../assets/skill-images/mysql.svg";
+import cloudinaryImg from "../../../assets/skill-images/cloudinary.svg";
+import aivenImg from "../../../assets/skill-images/aiven.svg";
+import bootstrapImg from "../../../assets/skill-images/bootstrap.svg";
+import phpImg from "../../../assets/skill-images/php.svg";
+import laravelImg from "../../../assets/skill-images/laravel.svg";
+import htmlImg from "../../../assets/skill-images/html.svg";
 
 const worksData = [
   {
-    url_image: "src/assets/work-images/task.webp",
+    url_image: taskImg,
     url_icons: [
-      "src/assets/skill-images/typescript.svg",
-      "src/assets/skill-images/next-js.svg",
-      "src/assets/skill-images/tailwind.svg",
-      "src/assets/skill-images/prisma.svg",
-      "src/assets/skill-images/daisy-ui.svg",
-      "src/assets/skill-images/material-ui.svg",
-      "src/assets/skill-images/sqlite.svg",
-      "src/assets/skill-images/turso.svg",
-      "src/assets/skill-images/nextauth.svg",
+      typescriptImg,
+      nextJsImg,
+      tailwindImg,
+      prismaImg,
+      daisyUiImg,
+      materialUiImg,
+      sqliteImg,
+      tursoImg,
+      nextAuthImg,
     ],
     title: "TaskEase",
     description:
@@ -22,16 +46,16 @@ const worksData = [
     url_demo: "https://taskease-todo.vercel.app",
   },
   {
-    url_image: "src/assets/work-images/movie.webp",
+    url_image: movieImg,
     url_icons: [
-      "src/assets/skill-images/javascript.svg",
-      "src/assets/skill-images/next-js.svg",
-      "src/assets/skill-images/tailwind.svg",
-      "src/assets/skill-images/prisma.svg",
-      "src/assets/skill-images/mysql.svg",
-      "src/assets/skill-images/cloudinary.svg",
-      "src/assets/skill-images/aiven.svg",
-      "src/assets/skill-images/nextauth.svg",
+      javascriptImg,
+      nextJsImg,
+      tailwindImg,
+      prismaImg,
+      mysqlImg,
+      cloudinaryImg,
+      aivenImg,
+      nextAuthImg,
     ],
     title: "Movie Peek",
     description:
@@ -40,25 +64,16 @@ const worksData = [
     url_demo: "https://movie-peek.vercel.app",
   },
   {
-    url_image: "src/assets/work-images/storage.webp",
-    url_icons: [
-      "src/assets/skill-images/bootstrap.svg",
-      "src/assets/skill-images/javascript.svg",
-      "src/assets/skill-images/php.svg",
-      "src/assets/skill-images/laravel.svg",
-    ],
+    url_image: storageImg,
+    url_icons: [bootstrapImg, javascriptImg, phpImg, laravelImg],
     title: "Goods Data Collection",
     description:
       "Built a goods data collection website for selling goods that require CRUD & validation, authentication for both user & admin roles, and relationships between certain models.",
     url_repository: "https://github.com/Vannn03/Goods-Data-Collection-Website",
   },
   {
-    url_image: "src/assets/work-images/event.webp",
-    url_icons: [
-      "src/assets/skill-images/html.svg",
-      "src/assets/skill-images/bootstrap.svg",
-      "src/assets/skill-images/javascript.svg",
-    ],
+    url_image: eventImg,
+    url_icons: [htmlImg, bootstrapImg, javascriptImg],
     title: "PuddingFest Event",
     description:
       "Built a responsive online event website called 'PuddingFest' for event participants who wish to register and see various event series.",
