@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const experienceData = [
   {
-    url_image: "src/assets/experience-images/binus.webp",
+    url_image: "experience-images/binus.webp",
     company_name: "Bina Nusantara University",
     job_detail: [
       {
@@ -15,7 +15,7 @@ const experienceData = [
     ],
   },
   {
-    url_image: "src/assets/experience-images/GDSC.webp",
+    url_image: "experience-images/GDSC.webp",
     company_name: "Google Developer Student Club",
     job_detail: [
       {
@@ -27,7 +27,7 @@ const experienceData = [
     ],
   },
   {
-    url_image: "src/assets/experience-images/exalter.webp",
+    url_image: "experience-images/exalter.webp",
     company_name: "Exalter Students",
     job_detail: [
       {
@@ -54,7 +54,7 @@ const experienceData = [
     ],
   },
   {
-    url_image: "src/assets/experience-images/bncc.webp",
+    url_image: "experience-images/bncc.webp",
     company_name: "Bina Nusantara Computer Club",
     job_detail: [
       {

@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const worksData = [
   {
-    url_image: "src/assets/work-images/gms.webp",
-    url_icons: ["src/assets/skill-images/figma.svg", "src/assets/skill-images/visual-paradigm.svg"],
+    url_image: "work-images/gms.webp",
+    url_icons: ["/skill-images/figma.svg", "/skill-images/visual-paradigm.svg"],
     title: "Body Ken Gym Management System",
     description:
       "An integrated application designed to help gym managers automate various daily administrative and operational functions.",
@@ -12,8 +12,8 @@ const worksData = [
       "https://www.figma.com/proto/Q9sojAekG34IHc3fO3AiK6/ABAD_Body-Ken-Gym?node-id=0-1&t=feiD1hpwKXx9lH0h-1",
   },
   {
-    url_image: "src/assets/work-images/petcare.webp",
-    url_icons: ["src/assets/skill-images/figma.svg"],
+    url_image: "work-images/petcare.webp",
+    url_icons: ["/skill-images/figma.svg"],
     title: "PetCare",
     description:
       "A mobile-based application that provides comprehensive health and care services for pets, including veterinary consultations, pet product sales, grooming services, and pet boarding.",
@@ -21,8 +21,8 @@ const worksData = [
       "https://www.figma.com/proto/sugUuwjD8kKqSoDyksR2Ki/PetCare?node-id=0-1&node-type=canvas&viewport=634%2C-43%2C0.23&t=ZmqNRX0VphRhE4NW-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=26%3A2",
   },
   {
-    url_image: "src/assets/work-images/skintastic.webp",
-    url_icons: ["src/assets/skill-images/figma.svg"],
+    url_image: "work-images/skintastic.webp",
+    url_icons: ["/skill-images/figma.svg"],
     title: "Skintastic",
     description:
       "A mobile application that sells various skincare products with eco-friendly packaging.",
@@ -57,7 +57,7 @@ const DesignWorks = () => (
                 alt="..."
                 loading="lazy"
                 className="aspect-square w-6 md:w-8"
-                title={icon.replace("src/assets/skill-images/", "").replace(".svg", "")}
+                title={icon.replace("/skill-images/", "").replace(".svg", "")}
               />
             ))}
           </div>
