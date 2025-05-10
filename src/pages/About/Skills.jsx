@@ -13,6 +13,8 @@ import nextAuthImg from "../../assets/skill-images/nextauth.svg";
 import angularImg from "../../assets/skill-images/angular.svg";
 import jiraImg from "../../assets/skill-images/jira.svg";
 import bitbucketImg from "../../assets/skill-images/bitbucket.svg";
+import awsImg from "../../assets/skill-images/aws.svg";
+import jenkinsImg from "../../assets/skill-images/jenkins.svg";
 import cucumberImg from "../../assets/skill-images/cucumber.svg";
 import playwrightImg from "../../assets/skill-images/playwright.svg";
 import swaggerImg from "../../assets/skill-images/swagger.svg";
@@ -51,6 +53,8 @@ const otherSkillData = [
   { url_img: angularImg, name: "Angular" },
   { url_img: jiraImg, name: "Jira" },
   { url_img: bitbucketImg, name: "Bitbucket" },
+  { url_img: awsImg, name: "AWS" },
+  { url_img: jenkinsImg, name: "Jenkins" },
   { url_img: cucumberImg, name: "Cucumber" },
   { url_img: playwrightImg, name: "Playwright" },
   { url_img: swaggerImg, name: "Swagger" },
