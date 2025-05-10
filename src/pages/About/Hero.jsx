@@ -33,7 +33,7 @@ const Hero = ({ selectedWorkRef }) => {
         >
           <p>Hi, I&apos;m</p>
           <TypeAnimation
-            sequence={["Jovan Hermawan", 3000, "a Binusian 25", 3000]}
+            sequence={["Jovan Hermawan", 3000, "from Jakarta-Indonesia", 3000]}
             wrapper="span"
             speed={60}
             repeat={Infinity}
@@ -61,10 +61,9 @@ const Hero = ({ selectedWorkRef }) => {
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <p className="mt-6 font-light text-text/75 xs:mt-8 xs:text-lg sm:mt-10 sm:text-xl md:text-lg lg:text-xl">
-            I’m burning with passion for crafting immersive online experiences
-            and bringing creative ideas to life through code.
-          </p>
+          <div className="mt-6 font-light text-text/75 xs:mt-8 xs:text-lg sm:mt-10 sm:text-xl md:text-lg lg:text-xl">
+            A final year student at <span className="font-semibold">BINUS University</span> currently undergoing an internship as a Software Engineer at <span className="font-semibold">HM Sampoerna</span>, an affiliate of <span className="font-semibold">Phillip Morris International</span>.
+          </div>
         </motion.div>
 
         <motion.div

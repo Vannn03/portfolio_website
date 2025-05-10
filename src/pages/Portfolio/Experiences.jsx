@@ -1,32 +1,32 @@
 import { FaLinkedin } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import binusImg from "../../assets/experience-images/binus.webp";
-import gdscImg from "../../assets/experience-images/GDSC.webp";
+// import binusImg from "../../assets/experience-images/binus.webp";
+// import gdscImg from "../../assets/experience-images/GDSC.webp";
+import sampoernaImg from "../../assets/experience-images/sampoerna.webp";
 import exalterImg from "../../assets/experience-images/exalter.webp";
 import bnccImg from "../../assets/experience-images/bncc.webp";
 
 const experienceData = [
   {
-    url_image: binusImg,
-    company_name: "Bina Nusantara University",
+    url_image: sampoernaImg,
+    company_name: "PT. HM Sampoerna Tbk (Phillip Morris Int.)",
     job_detail: [
       {
-        position: "Graduation Committee",
-        date: "Jul 2024 - Nov 2024",
-        description:
-          "Contributed to the execution of the 69th and 70th graduation ceremony for 4000+ graduates.",
-      },
-    ],
-  },
-  {
-    url_image: gdscImg,
-    company_name: "Google Developer Student Club",
-    job_detail: [
-      {
-        position: "Web Development Course Member",
-        date: "Oct 2023 - now",
-        description:
-          "Completed a full web development roadmap across four key areas, accomplishing 15+ tasks.",
+        position: "Software Engineer Intern",
+        date: "Feb 2025 - Present",
+        description: (
+          <ul className="list-disc pl-4">
+            <li>
+              Successfully contributed to the deployment of 20+ tickets across various project phases, including stories, tasks, bugs, and automations.
+            </li>
+            <li>
+              Achieved approximately 31% manday absorption on assigned tasks, indicating efficient time management and a strong ability to contribute meaningfully within allocated resources.
+            </li>
+            <li>
+              Contributed to cost efficiencies estimated at $5.500 reduction in 3 sprints.
+            </li>
+          </ul>
+        ),
       },
     ],
   },
