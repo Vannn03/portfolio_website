@@ -19,6 +19,7 @@ import cucumberImg from "../../assets/skill-images/cucumber.svg";
 import playwrightImg from "../../assets/skill-images/playwright.svg";
 import swaggerImg from "../../assets/skill-images/swagger.svg";
 import postmanImg from "../../assets/skill-images/postman.svg";
+import blazemeterImg from "../../assets/skill-images/blazemeter.svg";
 import bootstrapImg from "../../assets/skill-images/bootstrap.svg";
 import daisyUiImg from "../../assets/skill-images/daisy-ui.svg";
 import materialUiImg from "../../assets/skill-images/material-ui.svg";
@@ -46,11 +47,6 @@ const skillData = [
 ];
 
 const otherSkillData = [
-  { url_img: nextJsImg, name: "Next.js" },
-  { url_img: nodeJsImg, name: "Node.js" },
-  { url_img: prismaImg, name: "Prisma" },
-  { url_img: nextAuthImg, name: "NextAuth.js" },
-  { url_img: angularImg, name: "Angular" },
   { url_img: jiraImg, name: "Jira" },
   { url_img: bitbucketImg, name: "Bitbucket" },
   { url_img: awsImg, name: "AWS" },
@@ -59,6 +55,12 @@ const otherSkillData = [
   { url_img: playwrightImg, name: "Playwright" },
   { url_img: swaggerImg, name: "Swagger" },
   { url_img: postmanImg, name: "Postman" },
+  { url_img: blazemeterImg, name: "BlazeMeter" },
+  { url_img: nextJsImg, name: "Next.js" },
+  { url_img: nodeJsImg, name: "Node.js" },
+  { url_img: prismaImg, name: "Prisma" },
+  { url_img: nextAuthImg, name: "NextAuth.js" },
+  { url_img: angularImg, name: "Angular" },
   { url_img: bootstrapImg, name: "Bootstrap" },
   { url_img: daisyUiImg, name: "Daisy UI" },
   { url_img: materialUiImg, name: "Material UI" },
