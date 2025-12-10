@@ -17,13 +17,32 @@ const experienceData = [
         description: (
           <ul className="list-disc pl-4">
             <li>
-              Successfully contributed to the deployment of 20+ tickets across various project phases, including stories, tasks, bugs, and automations.
+              Contributed to the delivery of 88 tickets over 8 sprints (10
+              months).
             </li>
             <li>
-              Achieved approximately 31% manday absorption on assigned tasks, indicating efficient time management and a strong ability to contribute meaningfully within allocated resources.
+              Managed 7 different platforms within the AYO ecosystem,
+              encompassing both B2C and B2B products.
             </li>
             <li>
-              Contributed to cost efficiencies estimated at $5.500 reduction in 3 sprints.
+              Developed 32 automated testing scenarios for the CITA platform.
+            </li>
+            <li>
+              Supported Jenkins migration of 3 major platforms by performing QA
+              checks and identifying anomalies.
+            </li>
+            <li>
+              Assisted in managing and coordinating internal & external
+              resources on over 50 findings/bugs for the Panamas Project.
+            </li>
+            <li>
+              Assumed an associate-level role to assess software architecture
+              and features for the iSMS Replacement project, while personally
+              leading the delivery of 34 tickets for the MYHERO platform.
+            </li>
+            <li>
+              Co-led the development of MYHERO iPad automated testing, while
+              also writing 70+ test scenarios.
             </li>
           </ul>
         ),

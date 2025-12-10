@@ -8,25 +8,41 @@ const MenuToggler = () => {
   return (
     <>
       <div className="flex justify-center px-8 pb-8 ss:px-20">
-        <div className="relative flex w-fit items-center justify-center text-center font-medium xs:text-lg ss:text-xl">
-          <span
-            className={`absolute h-full w-1/2 rounded-full bg-accent ${!toggle ? "left-0" : "left-[143px]"} z-30 transition-all`}
-          />
-          <span
-            className="z-40 w-36 cursor-pointer rounded-l-full border-2 border-r-0 border-accent py-3"
+        <div className="relative flex w-64 items-center rounded-full border border-text/5 bg-text/10 p-1 xs:text-lg ss:text-xl">
+          {/* SLIDING PILL */}
+          <div
+            className={`absolute h-[calc(100%-8px)] w-[calc(50%-4px)] rounded-full bg-accent shadow-sm transition-transform duration-300 ease-in-out ${
+              toggle ? "translate-x-full" : "translate-x-0"
+            }`}
+          ></div>
+
+          {/* CODING BUTTON */}
+          <button
+            className={`z-10 w-1/2 rounded-full py-2 text-center text-sm font-semibold transition-colors duration-300 focus:outline-none ${
+              !toggle
+                ? "text-primary"
+                : "text-text opacity-60 hover:opacity-100"
+            }`}
             onClick={() => setToggle(false)}
           >
-            <p>Coding</p>
-          </span>
-          <span
-            className="z-40 w-36  cursor-pointer rounded-r-full border-2 border-l-0 border-accent py-3"
+            Coding
+          </button>
+
+          {/* UI/UX BUTTON */}
+          <button
+            className={`z-10 w-1/2 rounded-full py-2 text-center text-sm font-semibold transition-colors duration-300 focus:outline-none ${
+              toggle ? "text-primary" : "text-text opacity-60 hover:opacity-100"
+            }`}
             onClick={() => setToggle(true)}
           >
-            <p>UI/UX</p>
-          </span>
+            UI/UX
+          </button>
         </div>
       </div>
-      {!toggle ? <CodingWorks /> : <DesignWorks />}
+
+      <div className="transition-opacity duration-300">
+        {!toggle ? <CodingWorks /> : <DesignWorks />}
+      </div>
     </>
   );
 };
